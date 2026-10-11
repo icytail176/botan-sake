@@ -1,0 +1,96 @@
+{
+  "checkedAt": "2026-10-11T06:14:57.590739+00:00",
+  "phase": "pre-push",
+  "status": "passed",
+  "baseCommit": "51f7ecd6e456b9328267882adb4f27398ea52371",
+  "remoteDivergence": [
+    0,
+    0
+  ],
+  "preservedRound6AndExistingFiles": 121,
+  "websiteBuildIdenticalFiles": 46,
+  "readmeLines": 166,
+  "languages": [
+    "zh-CN",
+    "ja"
+  ],
+  "workflowBadge": ".github/workflows/deploy.yml, branch main",
+  "screenshots": [
+    {
+      "name": "home-desktop",
+      "url": "https://icytail176.github.io/botan-sake/",
+      "width": 1440,
+      "height": 1340,
+      "file": "docs/assets/home-desktop.webp",
+      "bytes": 58016,
+      "imageSize": {
+        "width": 1440,
+        "height": 1340
+      },
+      "sha256": "ec41a4dfd25d2dd197dccd699cae6e28c761cdc5f590cad3f2872474fa05fbb4",
+      "capture": "actual public website viewport, no DOM/style/content changes"
+    },
+    {
+      "name": "home-mobile",
+      "url": "https://icytail176.github.io/botan-sake/",
+      "width": 390,
+      "height": 1290,
+      "file": "docs/assets/home-mobile.webp",
+      "bytes": 36502,
+      "imageSize": {
+        "width": 390,
+        "height": 1290
+      },
+      "sha256": "e42881f4639ecee81a5b6a4a6888e0cc99abe81dfbcd744c08b96870583ea123",
+      "capture": "actual public website viewport, no DOM/style/content changes"
+    },
+    {
+      "name": "sake-detail",
+      "url": "https://icytail176.github.io/botan-sake/sake/v01-003/",
+      "width": 1440,
+      "height": 1000,
+      "fullPage": true,
+      "file": "docs/assets/sake-detail.webp",
+      "bytes": 129138,
+      "imageSize": {
+        "width": 1440,
+        "height": 2935
+      },
+      "sha256": "1aeddfe6dc8e21da40210e65862967bffc854bfea540fd24278e89ff87a42b49",
+      "capture": "actual public website viewport, no DOM/style/content changes"
+    }
+  ],
+  "screenshotBytesTotal": 223656,
+  "verification": {
+    "command": "npm run verify",
+    "tests": 18,
+    "failures": 0,
+    "build": {
+      "pages": 13,
+      "products": 10,
+      "appearances": 10,
+      "confirmed": 10,
+      "checkedLinks": 282,
+      "imageReferences": 30,
+      "checkedAssetCopies": 20,
+      "canonicalPages": 13,
+      "sitemapURLs": 12,
+      "unchangedOriginals": 21,
+      "specificationRows": 54,
+      "productsWithSpecifications": 10,
+      "descriptions": 10,
+      "tastingNotes": 9,
+      "backgrounds": 6,
+      "hiddenDetailMetadata": true,
+      "base": "/botan-sake/",
+      "failures": []
+    }
+  },
+  "privacyFileReview": {
+    "files": 127,
+    "sensitivePatternsFound": 0,
+    "ignoredCachesOrDebugScreenshotsIncluded": false
+  },
+  "changes": "README, three README assets, documentation link/anchor test, seventh-round reports; sixth-round maintenance system published unchanged",
+  "publication": "User explicitly authorized normal commit/push; actual SHA/Actions/GitHub rendering to be recorded after release"
+}

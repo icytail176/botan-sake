@@ -1,0 +1,259 @@
+{
+  "checkedAt": "2026-10-11T06:02:52.639101+00:00",
+  "scope": "local documentation and project Skill maintenance",
+  "status": "passed",
+  "readmeLines": {
+    "before": 320,
+    "after": 98
+  },
+  "skill": {
+    "path": ".agents/skills/update-sake-catalog/SKILL.md",
+    "name": "update-sake-catalog",
+    "formatValidator": "bundled skill-creator/scripts/quick_validate.py",
+    "formatResult": "Skill is valid!",
+    "yamlDependency": "PyYAML installed only under temporary directory for validation; project dependencies unchanged",
+    "discovery": "Repository path and required name/description follow official discovery specification",
+    "officialDocumentation": "https://learn.chatgpt.com/docs/build-skills",
+    "implicitInvocationEvaluation": "Not independently model-evaluated; current session UI auto-loading not claimed",
+    "referencesResolve": true,
+    "publicationBoundaryReviewed": true
+  },
+  "scenarioTests": {
+    "command": "node --test tests/maintenance.test.mjs",
+    "A": "passed: synchronized info/manual URL; repeated import; all other fields/associations unchanged",
+    "B": "passed: add existing sourced actual 50% in a temporary sake record; missing source rejected; retained fields",
+    "C": "passed: next-volume temporary real-material fixture; numeric multi-image matching; no name-based merge; explicit productId; new state unreviewed",
+    "isolation": "OS temporary directories; removed after tests; no production records, Git or remote operations"
+  },
+  "completeVerification": {
+    "command": "npm run verify",
+    "passed": true,
+    "tests": 18,
+    "failures": 0,
+    "importWarnings": 0,
+    "typeErrors": 0,
+    "typeWarnings": 0,
+    "build": {
+      "pages": 13,
+      "products": 10,
+      "appearances": 10,
+      "confirmed": 10,
+      "checkedLinks": 282,
+      "imageReferences": 30,
+      "checkedAssetCopies": 20,
+      "canonicalPages": 13,
+      "sitemapURLs": 12,
+      "unchangedOriginals": 21,
+      "specificationRows": 54,
+      "productsWithSpecifications": 10,
+      "descriptions": 10,
+      "tastingNotes": 9,
+      "backgrounds": 6,
+      "hiddenDetailMetadata": true,
+      "base": "/botan-sake/",
+      "failures": []
+    }
+  },
+  "preservation": {
+    "existingTrackedFilesExceptREADME": 113,
+    "allUnchanged": true,
+    "changedProtectedFiles": [],
+    "builtFilesCompared": 46,
+    "allBuiltBytesUnchanged": true,
+    "catalogManualInfoSourceAndAssetAssociationsUnchanged": true,
+    "historicalReportsAndBaselinesUnchanged": true,
+    "workflowAndBuildScriptsUnchanged": true,
+    "gitHead": "51f7ecd6e456b9328267882adb4f27398ea52371",
+    "gitHeadUnchanged": true
+  },
+  "relativeLinks": {
+    "checked": 43,
+    "failures": 0,
+    "links": [
+      {
+        "from": "README.md",
+        "target": "reports/DELIVERY.md"
+      },
+      {
+        "from": "README.md",
+        "target": "reports/round6-maintenance.md"
+      },
+      {
+        "from": "README.md",
+        "target": "docs/DEPLOYMENT.md"
+      },
+      {
+        "from": "README.md",
+        "target": "docs/CONTENT_GUIDE.md"
+      },
+      {
+        "from": "README.md",
+        "target": "AGENTS.md"
+      },
+      {
+        "from": "README.md",
+        "target": ".agents/skills/update-sake-catalog/SKILL.md"
+      },
+      {
+        "from": "README.md",
+        "target": "reports/round6-maintenance.md"
+      },
+      {
+        "from": "README.md",
+        "target": "docs/CONTENT_GUIDE.md"
+      },
+      {
+        "from": "README.md",
+        "target": "docs/RESEARCH_GUIDE.md"
+      },
+      {
+        "from": "README.md",
+        "target": "docs/DEPLOYMENT.md"
+      },
+      {
+        "from": "README.md",
+        "target": "reports/specification-research-round5.md"
+      },
+      {
+        "from": "README.md",
+        "target": "reports/specification-research-round5-nv.md"
+      },
+      {
+        "from": "AGENTS.md",
+        "target": ".agents/skills/update-sake-catalog/SKILL.md"
+      },
+      {
+        "from": "AGENTS.md",
+        "target": "docs/CONTENT_GUIDE.md"
+      },
+      {
+        "from": "AGENTS.md",
+        "target": "docs/RESEARCH_GUIDE.md"
+      },
+      {
+        "from": "AGENTS.md",
+        "target": "docs/DEPLOYMENT.md"
+      },
+      {
+        "from": ".agents/skills/update-sake-catalog/SKILL.md",
+        "target": "../../../AGENTS.md"
+      },
+      {
+        "from": ".agents/skills/update-sake-catalog/SKILL.md",
+        "target": "../../../README.md"
+      },
+      {
+        "from": ".agents/skills/update-sake-catalog/SKILL.md",
+        "target": "../../../docs/CONTENT_GUIDE.md"
+      },
+      {
+        "from": ".agents/skills/update-sake-catalog/SKILL.md",
+        "target": "../../../docs/RESEARCH_GUIDE.md"
+      },
+      {
+        "from": ".agents/skills/update-sake-catalog/SKILL.md",
+        "target": "../../../docs/DEPLOYMENT.md"
+      },
+      {
+        "from": "reports/round6-maintenance.md",
+        "target": "round6-inventory.json"
+      },
+      {
+        "from": "reports/round6-maintenance.md",
+        "target": "../docs/CONTENT_GUIDE.md"
+      },
+      {
+        "from": "reports/round6-maintenance.md",
+        "target": "../docs/RESEARCH_GUIDE.md"
+      },
+      {
+        "from": "reports/round6-maintenance.md",
+        "target": "../docs/DEPLOYMENT.md"
+      },
+      {
+        "from": "reports/round6-maintenance.md",
+        "target": "../AGENTS.md"
+      },
+      {
+        "from": "reports/round6-maintenance.md",
+        "target": "../.agents/skills/update-sake-catalog/SKILL.md"
+      },
+      {
+        "from": "reports/round6-maintenance.md",
+        "target": "round6-validation.json"
+      },
+      {
+        "from": "docs/CONTENT_GUIDE.md",
+        "target": "../README.md"
+      },
+      {
+        "from": "docs/CONTENT_GUIDE.md",
+        "target": "RESEARCH_GUIDE.md"
+      },
+      {
+        "from": "docs/CONTENT_GUIDE.md",
+        "target": "DEPLOYMENT.md"
+      },
+      {
+        "from": "docs/CONTENT_GUIDE.md",
+        "target": "../reports/original-checksums.json"
+      },
+      {
+        "from": "docs/CONTENT_GUIDE.md",
+        "target": "../reports/round5-before.json"
+      },
+      {
+        "from": "docs/CONTENT_GUIDE.md",
+        "target": "../reports/round5-nv-baseline.json"
+      },
+      {
+        "from": "docs/CONTENT_GUIDE.md",
+        "target": "../reports/round5-nv-before.json"
+      },
+      {
+        "from": "docs/DEPLOYMENT.md",
+        "target": "../reports/round4-delivery.md"
+      },
+      {
+        "from": "docs/DEPLOYMENT.md",
+        "target": "../reports/DELIVERY.md"
+      },
+      {
+        "from": "docs/DEPLOYMENT.md",
+        "target": "../reports/release-round5-2026-10-11.json"
+      },
+      {
+        "from": "docs/RESEARCH_GUIDE.md",
+        "target": "CONTENT_GUIDE.md"
+      },
+      {
+        "from": "docs/RESEARCH_GUIDE.md",
+        "target": "DEPLOYMENT.md"
+      },
+      {
+        "from": "docs/RESEARCH_GUIDE.md",
+        "target": "../reports/specification-research.md"
+      },
+      {
+        "from": "docs/RESEARCH_GUIDE.md",
+        "target": "../reports/specification-research-round5.md"
+      },
+      {
+        "from": "docs/RESEARCH_GUIDE.md",
+        "target": "../reports/specification-research-round5-nv.md"
+      }
+    ]
+  },
+  "fileOperations": {
+    "deleted": [],
+    "moved": []
+  },
+  "publication": {
+    "commit": false,
+    "push": false,
+    "workflowDispatch": false,
+    "deployment": false,
+    "oldImageHostModified": false
+  },
+  "notRepeated": "Browser and online acceptance were not rerun: no rendered changes, all 46 dist files identical. Previous fifth-round evidence retained in place."
+}
