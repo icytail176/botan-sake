@@ -2,7 +2,7 @@
 
 《上伊那ぼたん、酔へる姿は百合の花》的非官方日文酒款图鉴。Astro + TypeScript + 原生 CSS，完全静态生成，预设 GitHub Pages 地址为 https://icytail176.github.io/botan-sake/ 。2026-10-11 已获用户明确确认并完成首次公开发布；正式网站 https://icytail176.github.io/botan-sake/ ，源码仓库 https://github.com/icytail176/botan-sake 。旧 image-host 未改动。
 
-第五轮已扩充资料并精简导航，并获用户授权发布；发布结果见交付记录。第4款按明确授权对齐指定Dragee的NV商品。第五轮核对见 [研究报告](reports/specification-research-round5.md)，首次发布历史见 [第四轮交付](reports/round4-delivery.md)。
+第五轮资料扩充、导航优化及第4款NV修订已于2026-10-11正式发布，Actions和线上四宽验收均通过；详见[交付记录](reports/DELIVERY.md)。第4款按明确授权对齐指定Dragee的NV商品。第五轮核对见 [研究报告](reports/specification-research-round5.md)，首次发布历史见 [第四轮交付](reports/round4-delivery.md)。
 
 ## 日常更新（首次发布完成后）
 
@@ -244,7 +244,7 @@ URL: https://example.com/product
 
 ## 测试与报告
 
-`npm run test` 当前包含 11 项测试，覆盖纯文本 / BBCode / Markdown、序号识别、手工字段验证、两卷重复商品关联、多张截图、人工数据保护、去重、派生恢复、白边、原图完整性、冲突/缺失报告，以及清理幂等性。发布回归测试在临时目录复制真实第 1 卷资料，连续导入并验证 10 个 confirmed 持久、无旧备注或 BBCode、历史剪辑不覆盖文本，模拟第 2 卷记录仍为 unreviewed。新增规格回归检查来源引用、日期、空值与安全 URL，验证手动修改数值后，自动文字变化与跨卷关联不会覆盖人工规格。不会在正式资料中创建示例商品。
+`npm run test` 当前包含 14 项测试，覆盖纯文本 / BBCode / Markdown、序号识别、手工字段验证、两卷重复商品关联、多张截图、人工数据保护、去重、派生恢复、白边、原图完整性、冲突/缺失报告，以及清理幂等性。发布回归测试在临时目录复制真实第 1 卷资料，连续导入并验证 10 个 confirmed 持久、无旧备注或 BBCode、历史剪辑不覆盖文本，模拟第 2 卷记录仍为 unreviewed。新增规格回归检查来源引用、日期、空值与安全 URL，验证手动修改数值后，自动文字变化与跨卷关联不会覆盖人工规格。不会在正式资料中创建示例商品。
 
 `npm run build` 额外检查数据引用、唯一 ID、800×800 缩略图、每个详情路由、所有内部 href/src、锚点、base 路径、所有页面 canonical、12 条 sitemap URL、旧图床引用、日文页面、全部图片编号关联、public/dist 原图副本和初始 21 个原始文件的 SHA-256；同时检查详情无可见内部编号/话数/页码、卷数存在、规格行数及来源锚点、无规格时不生成基本信息区域；结果为 `reports/build-validation.json`。
 
@@ -311,9 +311,9 @@ npm run test:online
 
 当前为54条规格（原39条保留）、10段介绍、9条风味、6条背景。第4款已明确维护为指定链接对应的NV产品；数值和年份范围见 [NV补充报告](reports/specification-research-round5-nv.md)。Header仅保留关于页入口，标题返回首页；详情返回图鉴及前后酒款导航保留。原生卷筛选使用内嵌SVG背景箭头，距右侧18px、右内边距48px，保留键盘语义；强制高对比模式恢复原生箭头。
 
-本轮发布已获得用户明确授权；维护时依照上方日常更新步骤提交和推送，Actions自动发布。实际部署状态见DELIVERY.md。
+本轮已按用户明确授权正常推送并发布，内容提交为`7a905b882452f699dff54f49e5f3172a7f1a7b09`，[构建与部署成功](https://github.com/icytail176/botan-sake/actions/runs/38115688354)。维护时依照上方日常更新步骤提交和推送，Actions自动发布。详见[发布记录](reports/release-round5-2026-10-11.json)。
 
-浏览器验收限制：macOS Chrome在当前自动化环境中不提交原生菜单的方向键选择，未加样式的最小select也复现；已验证Tab焦点及点击筛选，但发布前建议实际浏览器人工确认方向键/Enter。Windows、Safari与手机真机未实测。
+浏览器验收限制：macOS Chrome在当前自动化环境中不提交原生菜单的方向键选择，未加样式的最小select也复现；已验证Tab焦点及点击筛选，方向键/Enter仍需人工浏览器确认。Windows、Safari与手机真机未实测。
 
 `reports/round5-before.json` 是第五轮保护既有资料的回归基准，新增酒款/卷不会因此受阻。以后有意更正原10款的名称、链接、规格或图像时，应由维护者根据新证据审查并同步更新对应基准和研究记录，不能为通过测试而静默改写基准。
 
