@@ -22,7 +22,7 @@ const canonical = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
     <a class="skip-link" href="#main">本文へ移動</a>
     <header class="site-header wrap">
       <a class="brand" href={withBase()} aria-label="ぼたんの酒手帖 ホーム"><span class="brand-mark"><Mark /></span><span>ぼたんの酒手帖<small>BOTAN’S SAKE NOTEBOOK</small></span></a>
-      <nav aria-label="メインナビゲーション"><a href={withBase()} aria-current={active === 'home' ? 'page' : undefined}>ホーム</a><a href={withBase('#catalog')} class:list={{ 'is-active': active === 'catalog' }} aria-current={active === 'catalog' ? 'page' : undefined}>酒図鑑</a><a href={withBase('about/')} aria-current={active === 'about' ? 'page' : undefined}>この手帖について</a></nav>
+      <nav aria-label="メインナビゲーション"><a href={withBase('about/')} aria-current={active === 'about' ? 'page' : undefined}>この手帖について</a></nav>
     </header>
     <main id="main"><slot /></main>
     <footer class="site-footer wrap"><div><a class="footer-brand" href={withBase()}>ぼたんの酒手帖</a><p>物語に登場するお酒を、ひとつずつ。</p></div><div class="footer-note"><p>『上伊那ぼたん、酔へる姿は百合の花』非公式ファンサイト</p><p>作品・商品画像の権利は各権利者に帰属します。</p><a href={withBase('about/')}>出典・このサイトについて <span aria-hidden="true">↗</span></a>{config.contactEmail && <a href={`mailto:${config.contactEmail}`}>お問い合わせ</a>}</div><small class="footer-end">BOTAN’S SAKE NOTEBOOK <span>個人による資料アーカイブ</span></small></footer>

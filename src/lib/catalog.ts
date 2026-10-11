@@ -2,7 +2,10 @@ import raw from '../../data/catalog.json';
 export interface Asset { path: string; source: string; width: number; height: number; hash: string }
 export interface Specification { label: string; value: string; sourceIds: string[]; note?: string }
 export interface SpecificationSource { id: string; title: string; url: string; checkedAt: string; versionNote?: string }
-export interface Product { id: string; name: string; category: string | null; categorySource: string | null; url: string | null; notes: string | null; images: Asset[]; thumbnail: Asset | null; specifications: Partial<Record<string, Specification | null>>; specificationSources: SpecificationSource[]; specificationGaps: Partial<Record<string, string>> }
+export interface SourcedText { text: string; sourceIds: string[]; note?: string }
+export interface TastingNote extends SourcedText { attribution: string }
+export interface Background extends SourcedText { scope: 'product' | 'brand' }
+export interface Product { description: SourcedText | null; tastingNotes: TastingNote[]; background: Background[]; id: string; name: string; category: string | null; categorySource: string | null; url: string | null; notes: string | null; images: Asset[]; thumbnail: Asset | null; specifications: Partial<Record<string, Specification | null>>; specificationSources: SpecificationSource[]; specificationGaps: Partial<Record<string, string>> }
 export const specificationsFor = (product: Product) => Object.entries(product.specifications).filter((entry): entry is [string, Specification] => entry[1] != null);
 export interface Appearance { id: string; productId: string; volume: number; number: number; status: 'confirmed' | 'uncertain' | 'unreviewed'; source: string | null; notes: string | null; scenes: Asset[]; textSources: string[] }
 export const catalog = raw as { schemaVersion: number; volumes: { number: number; directory: string; label: string }[]; products: Product[]; appearances: Appearance[] };

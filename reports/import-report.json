@@ -10,8 +10,8 @@
     {
       "file": "第1巻/info.txt",
       "kind": "text",
-      "bytes": 1098,
-      "sha256": "6d890857e5668b85b94d015fb57342955b7f70d289872fdc7ee10ded43ace1b5"
+      "bytes": 1088,
+      "sha256": "5baaeee4eb6c2b8a8c3ce5c5885883c9e0b69af7b55f8584723ae8b4080fd590"
     },
     {
       "file": "第1巻/products/1.webp",
@@ -189,11 +189,6 @@
       "severity": "info",
       "code": "source-not-provided",
       "id": "v01-003"
-    },
-    {
-      "severity": "warning",
-      "code": "category-not-provided",
-      "id": "v01-004"
     },
     {
       "severity": "info",

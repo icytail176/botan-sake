@@ -2,6 +2,8 @@
 
 《上伊那ぼたん、酔へる姿は百合の花》的非官方日文酒款图鉴。Astro + TypeScript + 原生 CSS，完全静态生成，预设 GitHub Pages 地址为 https://icytail176.github.io/botan-sake/ 。2026-10-11 已获用户明确确认并完成首次公开发布；正式网站 https://icytail176.github.io/botan-sake/ ，源码仓库 https://github.com/icytail176/botan-sake 。旧 image-host 未改动。
 
+第五轮已扩充资料并精简导航，并获用户授权发布；发布结果见交付记录。第4款按明确授权对齐指定Dragee的NV商品。第五轮核对见 [研究报告](reports/specification-research-round5.md)，首次发布历史见 [第四轮交付](reports/round4-delivery.md)。
+
 ## 日常更新（首次发布完成后）
 
 1. 把同编号商品图和截图加入第N巻/products、scenes，更新该卷 info.txt 的名称与商品链接。
@@ -10,7 +12,7 @@
 4. `git add .` → `git diff --cached --stat` → `git commit -m "Update sake archive"` → `git push origin main`。
 5. GitHub Actions 自动构建、发布。首次部署或关键改动后运行 `npm run test:online` 验收实际线上网站。
 
-首次发布已通过实际线上验收，见 [交付报告](reports/DELIVERY.md)；推送前文件与素材审查保留于 [发布准备记录](reports/release-preflight.md)。
+首次发布已通过实际线上验收，见 [第四轮交付报告](reports/round4-delivery.md)；推送前文件与素材审查保留于 [发布准备记录](reports/release-preflight.md)。
 
 ## 本地使用
 
@@ -276,3 +278,43 @@ npm run test:online
 该命令无需本地服务器，直接测试正式地址在 375 / 390 / 768 / 1440px 的页面、全部详情、图片、搜索/筛选、Lightbox、导航、商品与参数链接、canonical、sitemap 和 404。需本机安装 Google Chrome。只有产生标记 online 的通过报告，才能声称线上验收通过。
 
 公开源码中保留维护资料与历史报告；旧商品 URL 可在历史记录中出现，网站构建不再引用它们。旧 icytail176/image-host 不参与新站资源、部署或任何写操作，不能在本轮删除。
+
+## 第五轮：商品介绍、风味与背景
+
+继续只编辑 `data/manual.json` 的 `products.ID`。自动导入文件不是人工入口。三个新字段都属于商品；漫画登场、confirmed 和跨卷关联仍在 `appearances`，两者独立。
+
+```json
+"description": {
+  "text": "根据已读商品正文撰写的简短日文介绍。",
+  "sourceIds": ["official"],
+  "note": "必要时说明适用版本。"
+},
+"tastingNotes": [{
+  "text": "概括生产商或可靠专业资料的风味描述。",
+  "sourceIds": ["official"],
+  "attribution": "蔵元による説明"
+}],
+"background": [{
+  "text": "已经核实的沿革或名称由来。",
+  "sourceIds": ["company"],
+  "scope": "brand"
+}]
+```
+
+这是结构示例，不能把示例文字加入真实商品。`description` 可留 `null`，`tastingNotes`、`background` 可留空数组或省略；没有内容就不显示模块。`text`、`sourceIds` 不可为空，风味必须写来源归属 `attribution`，背景 `scope` 必须为 `brand`（蔵元・品牌）或 `product`（具体銘柄）。`note` 为可选日文版本说明，会显示在对应段落下。
+
+- 每个 `sourceIds` 必须引用同商品 `specificationSources` 的已存在 ID；新增来源填写标题、真实 HTTP(S) URL、查询日期 `checkedAt`，并用 `versionNote` 标明年份、仕込号、市场或资料范围。来源池同时供规格和文章使用。
+- 规格的新增/修改仍在 `specifications`，保留字段单位和证据。未核实字段留 `null`，原因写 `specificationGaps`。如果已有值和新版冲突，先保留旧值，写明其适用版本，并以另一个缺项键（例如 `ingredientsVersion`）记录争议；不要把不同年份参数混成一个规格。
+- 资料先在 `reports/specification-research-round5.md` 中核对 A/B/C：A 可采用；B 只采用无争议的共同属性并说明范围；C 留在报告。搜索摘要、无法读取的正文不算事实证据。
+- 运行 `npm run verify` 完成导入、来源检查、幂等性回归、类型检查及构建。`manual.json` 不会被脚本改写，新增资料会合并到 `catalog.json`；暂缺资料不会产生空白段落。
+- UI 检查先 `npm run preview`，另一个终端 `npm run test:browser`。覆盖375/390/768/1440px；本地截图被Git忽略。发布后才使用 `npm run test:online`，避免把未发布资料与旧线上页面比较。
+
+当前为54条规格（原39条保留）、10段介绍、9条风味、6条背景。第4款已明确维护为指定链接对应的NV产品；数值和年份范围见 [NV补充报告](reports/specification-research-round5-nv.md)。Header仅保留关于页入口，标题返回首页；详情返回图鉴及前后酒款导航保留。原生卷筛选使用内嵌SVG背景箭头，距右侧18px、右内边距48px，保留键盘语义；强制高对比模式恢复原生箭头。
+
+本轮发布已获得用户明确授权；维护时依照上方日常更新步骤提交和推送，Actions自动发布。实际部署状态见DELIVERY.md。
+
+浏览器验收限制：macOS Chrome在当前自动化环境中不提交原生菜单的方向键选择，未加样式的最小select也复现；已验证Tab焦点及点击筛选，但发布前建议实际浏览器人工确认方向键/Enter。Windows、Safari与手机真机未实测。
+
+`reports/round5-before.json` 是第五轮保护既有资料的回归基准，新增酒款/卷不会因此受阻。以后有意更正原10款的名称、链接、规格或图像时，应由维护者根据新证据审查并同步更新对应基准和研究记录，不能为通过测试而静默改写基准。
+
+第4款名称和URL同时维护在第1巻/info.txt与manual.json。旧Reserva研究记录保留追溯，当前产品采用NV版本；其他9款资料和所有图片保持。`reports/round5-nv-baseline.json` 是本次明确授权的第4款新维护基准，`round5-before.json` 保留原39条规格审计，`round5-nv-before.json` 校验其他9款第五轮资料未被覆盖。今后有意修改时须依新证据审查基准，不能关闭测试。

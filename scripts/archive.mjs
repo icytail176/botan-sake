@@ -11,7 +11,11 @@ const textValue = z.string().trim().min(1);
 const sourceId = z.string().regex(/^[a-z][a-z0-9-]*$/);
 const specification = z.object({ label: textValue, value: textValue, sourceIds: z.array(sourceId).min(1), note: textValue.optional() }).strict();
 const specificationSource = z.object({ id: sourceId, title: textValue, url, checkedAt: z.iso.date(), versionNote: textValue.optional() }).strict();
+const sourcedText = z.object({ text: textValue, sourceIds: z.array(sourceId).min(1), note: textValue.optional() }).strict();
 const specificationFields = {
+  description: sourcedText.nullable().optional(),
+  tastingNotes: z.array(sourcedText.extend({ attribution: textValue })).optional(),
+  background: z.array(sourcedText.extend({ scope: z.enum(['product', 'brand']) })).optional(),
   specifications: z.record(z.string().regex(/^[a-z][a-zA-Z0-9]*$/), specification.nullable()).optional(),
   specificationSources: z.array(specificationSource).optional(),
   specificationGaps: z.record(z.string(), textValue).optional()
@@ -20,6 +24,12 @@ function checkSpecificationReferences(product, ctx) {
   const sources = product.specificationSources ?? [];
   const ids = new Set(sources.map(s=>s.id));
   if (ids.size !== sources.length) ctx.addIssue({ code: 'custom', path: ['specificationSources'], message: 'Duplicate specification source ID' });
+  for (const field of ['description', 'tastingNotes', 'background']) {
+    const entries = field === 'description' ? (product.description ? [product.description] : []) : (product[field] ?? []);
+    for (const [index, entry] of entries.entries()) for (const id of entry.sourceIds) {
+      if (!ids.has(id)) ctx.addIssue({ code: 'custom', path: [field, ...(field === 'description' ? [] : [index]), 'sourceIds'], message: `Missing prose source: ${id}` });
+    }
+  }
   for (const [key, spec] of Object.entries(product.specifications ?? {})) {
     if (!spec) continue;
     for (const id of spec.sourceIds) if (!ids.has(id)) ctx.addIssue({ code: 'custom', path: ['specifications', key, 'sourceIds'], message: `Missing specification source: ${id}` });
@@ -30,7 +40,7 @@ const productEdit = z.object({ name: z.string().min(1).optional(), url: url.null
 const appearanceEdit = z.object({ productId: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).optional(), status: status.optional(), source: z.string().nullable().optional(), notes: z.string().nullable().optional() }).strict();
 export const manualSchema = z.object({ products: z.record(z.string(), productEdit), appearances: z.record(z.string(), appearanceEdit) }).strict();
 const assetSchema = z.object({ path: z.string(), source: z.string(), width: z.number().positive(), height: z.number().positive(), hash: z.string() });
-export const catalogSchema = z.object({ schemaVersion: z.literal(1), volumes: z.array(z.object({ number: z.number().int().positive(), directory: z.string(), label: z.string() })), products: z.array(z.object({ id: z.string(), name: z.string().min(1), category: z.enum(categories).nullable(), categorySource: z.string().nullable(), url: url.nullable(), notes: z.string().nullable(), images: z.array(assetSchema), thumbnail: assetSchema.nullable(), ...specificationFields, specifications: specificationFields.specifications.default({}), specificationSources: specificationFields.specificationSources.default([]), specificationGaps: specificationFields.specificationGaps.default({}) }).superRefine(checkSpecificationReferences)), appearances: z.array(z.object({ id: z.string(), productId: z.string(), volume: z.number().positive(), number: z.number().int().nonnegative(), status, source: z.string().nullable(), notes: z.string().nullable(), scenes: z.array(assetSchema), textSources: z.array(z.string()) })) });
+export const catalogSchema = z.object({ schemaVersion: z.literal(1), volumes: z.array(z.object({ number: z.number().int().positive(), directory: z.string(), label: z.string() })), products: z.array(z.object({ id: z.string(), name: z.string().min(1), category: z.enum(categories).nullable(), categorySource: z.string().nullable(), url: url.nullable(), notes: z.string().nullable(), images: z.array(assetSchema), thumbnail: assetSchema.nullable(), ...specificationFields, description: specificationFields.description.default(null), tastingNotes: specificationFields.tastingNotes.default([]), background: specificationFields.background.default([]), specifications: specificationFields.specifications.default({}), specificationSources: specificationFields.specificationSources.default([]), specificationGaps: specificationFields.specificationGaps.default({}) }).superRefine(checkSpecificationReferences)), appearances: z.array(z.object({ id: z.string(), productId: z.string(), volume: z.number().positive(), number: z.number().int().nonnegative(), status, source: z.string().nullable(), notes: z.string().nullable(), scenes: z.array(assetSchema), textSources: z.array(z.string()) })) });
 const strip = s => s.replace(/\[img[^\]]*\][\s\S]*?\[\/img\]/gi, '').replace(/\[\/?(?:size|center|b|i|color|url)[^\]]*\]/gi, '').trim();
 export function parseText(text, source, issues = []) {
   const records = new Map(); let current;

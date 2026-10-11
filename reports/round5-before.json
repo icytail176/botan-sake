@@ -1,0 +1,1507 @@
+{
+  "catalog": {
+    "schemaVersion": 1,
+    "volumes": [
+      {
+        "number": 1,
+        "directory": "第1巻",
+        "label": "第1巻"
+      }
+    ],
+    "products": [
+      {
+        "id": "v01-001",
+        "name": "秩父ワイン 源作印 巨峰 ロゼ",
+        "category": "ワイン",
+        "categorySource": "第1巻/info.txt：名称に「秩父ワイン」と明記",
+        "url": "https://chichibuwine.co.jp/product/%E6%BA%90%E4%BD%9C%E5%8D%B0%E3%80%80%E5%B7%A8%E5%B3%B0%E3%80%80720ml/",
+        "notes": null,
+        "images": [
+          {
+            "path": "images/originals/3a2767eaea694026f7f9f54be655ffb29aa74162515f91b983b8781c77bb5cd1.webp",
+            "source": "第1巻/products/1.webp",
+            "width": 1440,
+            "height": 1920,
+            "hash": "3a2767eaea694026f7f9f54be655ffb29aa74162515f91b983b8781c77bb5cd1"
+          }
+        ],
+        "thumbnail": {
+          "path": "images/thumbs/3a2767eaea694026f7f9f54be655ffb29aa74162515f91b983b8781c77bb5cd1-800-v1.webp",
+          "source": "第1巻/products/1.webp",
+          "width": 800,
+          "height": 800,
+          "hash": "3a2767eaea694026f7f9f54be655ffb29aa74162515f91b983b8781c77bb5cd1"
+        },
+        "specifications": {
+          "manufacturer": {
+            "label": "製造元",
+            "value": "有限会社秩父ワイン",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "style": {
+            "label": "種類",
+            "value": "ロゼワイン",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "grapeVariety": {
+            "label": "ブドウ品種",
+            "value": "巨峰",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "grapeOrigin": {
+            "label": "ブドウ収穫地",
+            "value": "山梨県",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "vintage": {
+            "label": "醸造年",
+            "value": "ノンヴィンテージ",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "abv": null
+        },
+        "specificationSources": [
+          {
+            "id": "official",
+            "title": "秩父ワイン公式 — 源作印 巨峰 720ml",
+            "url": "https://chichibuwine.co.jp/product/%E6%BA%90%E4%BD%9C%E5%8D%B0%E3%80%80%E5%B7%A8%E5%B3%B0%E3%80%80720ml/",
+            "checkedAt": "2026-10-11",
+            "versionNote": "公式掲載のノンヴィンテージ品。ブドウ収穫地は製造元所在地とは異なります。"
+          }
+        ],
+        "specificationGaps": {
+          "abv": "官方具体商品页面未列酒精度；不使用其他源作印酒款的数值。"
+        }
+      },
+      {
+        "id": "v01-002",
+        "name": "秩父麦酒 ペールエール 華熊",
+        "category": "ビール",
+        "categorySource": "第1巻/info.txt：名称に「秩父麦酒 ペールエール」と明記",
+        "url": "https://chichibubeer.shop-pro.jp/?pid=151056744",
+        "notes": null,
+        "images": [
+          {
+            "path": "images/originals/98ef620d7e80c633f5b417e84f6b025cb757e46a13a6ef05e2c442508e51eb67.jpg",
+            "source": "第1巻/products/2.jpeg",
+            "width": 600,
+            "height": 600,
+            "hash": "98ef620d7e80c633f5b417e84f6b025cb757e46a13a6ef05e2c442508e51eb67"
+          }
+        ],
+        "thumbnail": {
+          "path": "images/thumbs/98ef620d7e80c633f5b417e84f6b025cb757e46a13a6ef05e2c442508e51eb67-800-v1.webp",
+          "source": "第1巻/products/2.jpeg",
+          "width": 800,
+          "height": 800,
+          "hash": "98ef620d7e80c633f5b417e84f6b025cb757e46a13a6ef05e2c442508e51eb67"
+        },
+        "specifications": {
+          "brewery": {
+            "label": "ブルワリー",
+            "value": "秩父麦酒（合同会社 BEAR MEET BEER）",
+            "sourceIds": [
+              "brand-release"
+            ]
+          },
+          "style": {
+            "label": "ビアスタイル",
+            "value": "American Pale Ale",
+            "sourceIds": [
+              "official-shop",
+              "brand-release"
+            ]
+          },
+          "origin": {
+            "label": "ブルワリー所在地",
+            "value": "埼玉県秩父市下吉田",
+            "sourceIds": [
+              "brand-release"
+            ]
+          },
+          "abv": null,
+          "ibu": null
+        },
+        "specificationSources": [
+          {
+            "id": "official-shop",
+            "title": "秩父麦酒公式ショップ — 華熊 American Pale Ale",
+            "url": "https://chichibubeer.shop-pro.jp/?pid=151056744",
+            "checkedAt": "2026-10-11",
+            "versionNote": "年齢確認画面の商品名を確認。仕様本文は取得できませんでした。"
+          },
+          {
+            "id": "brand-release",
+            "title": "BEAR MEET BEER公式発表 — 秩父麦酒・既存商品の紹介",
+            "url": "https://prtimes.jp/main/html/rd/p/000000001.000105909.html",
+            "checkedAt": "2026-10-11",
+            "versionNote": "華熊の名称・スタイル、醸造所と会社情報を参照。本文の5.0%は別商品「彩の熊のラガー」の値です。"
+          }
+        ],
+        "specificationGaps": {
+          "abv": "官方店年龄门限未返回规格；品牌发布中5.0%属于彩の熊のラガー，未套用。",
+          "ibu": "检索到评价网站的25/50等不同值，无足够可靠的同版本官方证据。"
+        }
+      },
+      {
+        "id": "v01-003",
+        "name": "秩父錦 純米大吟醸",
+        "category": "日本酒",
+        "categorySource": "第1巻/info.txt：名称に「純米大吟醸」と明記",
+        "url": "https://chichibunishiki.com/meishu/#a03",
+        "notes": null,
+        "images": [
+          {
+            "path": "images/originals/7d24814a0f2f677ed2ebe924e4685747e83c657a9998d29855aafe70f44f220a.png",
+            "source": "第1巻/products/3.png",
+            "width": 600,
+            "height": 600,
+            "hash": "7d24814a0f2f677ed2ebe924e4685747e83c657a9998d29855aafe70f44f220a"
+          }
+        ],
+        "thumbnail": {
+          "path": "images/thumbs/7d24814a0f2f677ed2ebe924e4685747e83c657a9998d29855aafe70f44f220a-800-v1.webp",
+          "source": "第1巻/products/3.png",
+          "width": 800,
+          "height": 800,
+          "hash": "7d24814a0f2f677ed2ebe924e4685747e83c657a9998d29855aafe70f44f220a"
+        },
+        "specifications": {
+          "manufacturer": {
+            "label": "製造元",
+            "value": "株式会社矢尾本店",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "origin": {
+            "label": "蔵元所在地",
+            "value": "埼玉県秩父市",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "designation": {
+            "label": "特定名称",
+            "value": "純米大吟醸",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "ricePolishingRatio": {
+            "label": "精米歩合",
+            "value": "50%",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "riceVariety": {
+            "label": "原料米",
+            "value": "美山錦",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "abv": {
+            "label": "アルコール度数",
+            "value": "16%",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "sakeMeterValue": null,
+          "acidity": null
+        },
+        "specificationSources": [
+          {
+            "id": "official",
+            "title": "秩父錦公式 — 純米大吟醸",
+            "url": "https://chichibunishiki.com/meishu/#a03",
+            "checkedAt": "2026-10-11",
+            "versionNote": "「純米大吟醸 1.8L/720ml」の欄を参照。特選大吟醸・大吟醸・純米吟醸の値は使用していません。現行公式掲載仕様です。"
+          }
+        ],
+        "specificationGaps": {
+          "sakeMeterValue": "官方该商品条目未提供日本酒度。",
+          "acidity": "官方该商品条目未提供酸度。"
+        }
+      },
+      {
+        "id": "v01-004",
+        "name": "ヴィーニャ･アデライダ カバ ブリュット・ナチュール レセルバ",
+        "category": null,
+        "categorySource": null,
+        "url": "https://www.dragee.co.jp/fs/dragee/W-SK18070901",
+        "notes": null,
+        "images": [
+          {
+            "path": "images/originals/0422c2ac15549f2acff7d60b07d31352c9b5e461a6b6362e280d1f44e613b0c3.jpg",
+            "source": "第1巻/products/4.jpeg",
+            "width": 700,
+            "height": 700,
+            "hash": "0422c2ac15549f2acff7d60b07d31352c9b5e461a6b6362e280d1f44e613b0c3"
+          }
+        ],
+        "thumbnail": {
+          "path": "images/thumbs/0422c2ac15549f2acff7d60b07d31352c9b5e461a6b6362e280d1f44e613b0c3-800-v1.webp",
+          "source": "第1巻/products/4.jpeg",
+          "width": 800,
+          "height": 800,
+          "hash": "0422c2ac15549f2acff7d60b07d31352c9b5e461a6b6362e280d1f44e613b0c3"
+        },
+        "specifications": {
+          "manufacturer": null,
+          "origin": null,
+          "grapeVariety": null,
+          "abv": null,
+          "aging": null
+        },
+        "specificationSources": [],
+        "specificationGaps": {
+          "identityVersion": "2026-10-11 核对指定 Dragee W-SK18070901 商品页：明确为 Brut Nature NV，未见 Reserva 标记。其生产者、葡萄品种与 DO Cava 资料仅确认该 NV 条目，尚无跨版本共同属性证据；不套用至原 Reserva 酒款。保留原名称、confirmed、空分类及空规格。旧 Roger Goulart URL 仅在历史资料中保留。",
+          "manufacturer": "尚未核实精确 Reserva 版本的生产者。",
+          "origin": "尚未核实精确 Reserva 版本的产区。",
+          "grapeVariety": "近似 Brut Nature NV 的葡萄资料未套用。",
+          "abv": "搜索结果不同版本出现11.5%/12.5%，未确定对应版本，留空。",
+          "aging": "未找到精确 Reserva 版本的明确熟成规格，不从法定分类推定。"
+        }
+      },
+      {
+        "id": "v01-005",
+        "name": "アサヒスーパードライ",
+        "category": "ビール",
+        "categorySource": "https://www.asahibeer.co.jp/superdry/ （公式商品ページ、2026-10-11確認）",
+        "url": "https://www.asahibeer.co.jp/superdry/",
+        "notes": null,
+        "images": [
+          {
+            "path": "images/originals/6ce911f7c243c5586dd68b5d812291c8dffdac9ea43c8abd70162bc6bef96dd3.jpg",
+            "source": "第1巻/products/5.jpg",
+            "width": 1000,
+            "height": 1000,
+            "hash": "6ce911f7c243c5586dd68b5d812291c8dffdac9ea43c8abd70162bc6bef96dd3"
+          }
+        ],
+        "thumbnail": {
+          "path": "images/thumbs/6ce911f7c243c5586dd68b5d812291c8dffdac9ea43c8abd70162bc6bef96dd3-800-v1.webp",
+          "source": "第1巻/products/5.jpg",
+          "width": 800,
+          "height": 800,
+          "hash": "6ce911f7c243c5586dd68b5d812291c8dffdac9ea43c8abd70162bc6bef96dd3"
+        },
+        "specifications": {
+          "brewery": {
+            "label": "ブルワリー",
+            "value": "アサヒビール",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "abv": {
+            "label": "アルコール度数",
+            "value": "5%",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "ingredients": {
+            "label": "原材料",
+            "value": "麦芽、ホップ、米、コーン、スターチ",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "style": null,
+          "ibu": null,
+          "origin": null
+        },
+        "specificationSources": [
+          {
+            "id": "official",
+            "title": "アサヒビール公式 — アサヒスーパードライ 商品情報",
+            "url": "https://www.asahibeer.co.jp/products/beer/superdry/superdry.html",
+            "checkedAt": "2026-10-11",
+            "versionNote": "日本向け通常品の現行商品情報。ドライクリスタル等の別製品は対象外です。画像の製造時期は特定していません。原材料の製造国の割合表示は変更される場合があります。"
+          }
+        ],
+        "specificationGaps": {
+          "style": "官方此商品页未明确具体啤酒风格，不自行填入 Pilsner。",
+          "ibu": "官方商品页未列 IBU。",
+          "origin": "未将麦芽原料产地误当作成品原产地。"
+        }
+      },
+      {
+        "id": "v01-006",
+        "name": "百年の孤独",
+        "category": "焼酎",
+        "categorySource": "https://www.kurokihonten.co.jp/shochu/ （公式焼酎一覧、2026-10-11確認）",
+        "url": "https://www.kurokihonten.co.jp/shochu/",
+        "notes": null,
+        "images": [
+          {
+            "path": "images/originals/c85c89651ee0743329026348503acd9ecb2b57f92bba3b1044788ee5333ddbb0.webp",
+            "source": "第1巻/products/6.webp",
+            "width": 1378,
+            "height": 1378,
+            "hash": "c85c89651ee0743329026348503acd9ecb2b57f92bba3b1044788ee5333ddbb0"
+          }
+        ],
+        "thumbnail": {
+          "path": "images/thumbs/c85c89651ee0743329026348503acd9ecb2b57f92bba3b1044788ee5333ddbb0-800-v1.webp",
+          "source": "第1巻/products/6.webp",
+          "width": 800,
+          "height": 800,
+          "hash": "c85c89651ee0743329026348503acd9ecb2b57f92bba3b1044788ee5333ddbb0"
+        },
+        "specifications": {
+          "manufacturer": {
+            "label": "製造元",
+            "value": "株式会社黒木本店",
+            "sourceIds": [
+              "company"
+            ]
+          },
+          "origin": {
+            "label": "蔵元所在地",
+            "value": "宮崎県児湯郡高鍋町",
+            "sourceIds": [
+              "company"
+            ]
+          },
+          "style": {
+            "label": "種類",
+            "value": "麦焼酎",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "ingredients": {
+            "label": "原材料",
+            "value": "麦、麦麹",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "abv": {
+            "label": "アルコール度数",
+            "value": "40%",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "aging": null
+        },
+        "specificationSources": [
+          {
+            "id": "official",
+            "title": "黒木本店公式 — 百年の孤独",
+            "url": "https://www.kurokihonten.co.jp/shochu/",
+            "checkedAt": "2026-10-11",
+            "versionNote": "通常の「百年の孤独」720mlを参照。別欄の「百年のボトル」とは区別しています。"
+          },
+          {
+            "id": "company",
+            "title": "黒木本店公式 — 会社情報",
+            "url": "https://www.kurokihonten.co.jp/company/",
+            "checkedAt": "2026-10-11"
+          }
+        ],
+        "specificationGaps": {
+          "aging": "所查官方商品页未列明熟成年数与桶种；不从风味中的オーク字样推断桶种。"
+        }
+      },
+      {
+        "id": "v01-007",
+        "name": "塩田酒造 芋焼酎 六代目百合",
+        "category": "焼酎",
+        "categorySource": "第1巻/info.txt：名称に「芋焼酎」と明記",
+        "url": "https://www.honkakushochu.or.jp/product/1547/",
+        "notes": null,
+        "images": [
+          {
+            "path": "images/originals/4cd8bfd4160acec94671abebc953f4607ad88d33a10e1858b67b8d7c037fd2c8.jpg",
+            "source": "第1巻/products/7.jpg",
+            "width": 350,
+            "height": 500,
+            "hash": "4cd8bfd4160acec94671abebc953f4607ad88d33a10e1858b67b8d7c037fd2c8"
+          }
+        ],
+        "thumbnail": {
+          "path": "images/thumbs/4cd8bfd4160acec94671abebc953f4607ad88d33a10e1858b67b8d7c037fd2c8-800-v1.webp",
+          "source": "第1巻/products/7.jpg",
+          "width": 800,
+          "height": 800,
+          "hash": "4cd8bfd4160acec94671abebc953f4607ad88d33a10e1858b67b8d7c037fd2c8"
+        },
+        "specifications": {
+          "manufacturer": {
+            "label": "製造元",
+            "value": "塩田酒造株式会社",
+            "sourceIds": [
+              "association"
+            ]
+          },
+          "origin": {
+            "label": "蔵元所在地",
+            "value": "鹿児島県薩摩川内市里町里",
+            "sourceIds": [
+              "association"
+            ]
+          },
+          "abv": null,
+          "ingredients": {
+            "label": "原材料",
+            "value": "黄金千貫、米麹",
+            "sourceIds": [
+              "authorized-retailer"
+            ]
+          },
+          "style": {
+            "label": "種類",
+            "value": "芋焼酎",
+            "sourceIds": [
+              "authorized-retailer"
+            ]
+          },
+          "distillationMethod": {
+            "label": "蒸留方式",
+            "value": "常圧蒸留",
+            "sourceIds": [
+              "authorized-retailer"
+            ]
+          },
+          "koji": {
+            "label": "麹",
+            "value": "黒麹",
+            "sourceIds": [
+              "authorized-retailer"
+            ]
+          }
+        },
+        "specificationSources": [
+          {
+            "id": "association",
+            "title": "鹿児島県酒造組合 — 六代目百合・蔵元情報",
+            "url": "https://www.honkakushochu.or.jp/product/1547/",
+            "checkedAt": "2026-10-11"
+          },
+          {
+            "id": "authorized-retailer",
+            "title": "正規特約店・登酒店 — 六代目百合 25度／35度",
+            "url": "https://www.nobori-sake.com/shouhin/syoutyuu/siota/siotasyuzou.html",
+            "checkedAt": "2026-10-11",
+            "versionNote": "25度・35度の通常品は、原材料・麹・蒸留方式の記載が共通です。画像の度数は特定できないため、アルコール度数は掲載していません。原酒「風に吹かれて」とは区別しています。"
+          }
+        ],
+        "specificationGaps": {
+          "abv": "可信酒商显示25度与35度产品；现有图片不能可靠辨读度数，不选择其中一值。"
+        }
+      },
+      {
+        "id": "v01-008",
+        "name": "喜久盛酒造 タクシードライバー 純米生原酒",
+        "category": "日本酒",
+        "categorySource": "第1巻/info.txt：名称に「純米生原酒」と明記",
+        "url": "https://takahashi-sake.ocnk.net/product/4656",
+        "notes": null,
+        "images": [
+          {
+            "path": "images/originals/b12ed8dda8e4f9f961cab2fb0f4d2f01cbc2e7bcd1ae2d47eef78d6470ef9553.jpg",
+            "source": "第1巻/products/8.jpg",
+            "width": 480,
+            "height": 640,
+            "hash": "b12ed8dda8e4f9f961cab2fb0f4d2f01cbc2e7bcd1ae2d47eef78d6470ef9553"
+          }
+        ],
+        "thumbnail": {
+          "path": "images/thumbs/b12ed8dda8e4f9f961cab2fb0f4d2f01cbc2e7bcd1ae2d47eef78d6470ef9553-800-v1.webp",
+          "source": "第1巻/products/8.jpg",
+          "width": 800,
+          "height": 800,
+          "hash": "b12ed8dda8e4f9f961cab2fb0f4d2f01cbc2e7bcd1ae2d47eef78d6470ef9553"
+        },
+        "specifications": {
+          "manufacturer": {
+            "label": "製造元",
+            "value": "喜久盛酒造株式会社",
+            "sourceIds": [
+              "association"
+            ]
+          },
+          "origin": {
+            "label": "蔵元所在地",
+            "value": "岩手県北上市",
+            "sourceIds": [
+              "association"
+            ]
+          },
+          "designation": {
+            "label": "特定名称",
+            "value": "純米酒",
+            "sourceIds": [
+              "retailer"
+            ]
+          },
+          "style": {
+            "label": "種類",
+            "value": "生原酒",
+            "sourceIds": [
+              "retailer"
+            ]
+          },
+          "ricePolishingRatio": null,
+          "riceVariety": null,
+          "abv": null,
+          "sakeMeterValue": null,
+          "acidity": null
+        },
+        "specificationSources": [
+          {
+            "id": "association",
+            "title": "日本酒造組合中央会 — 喜久盛酒造・タクシードライバー",
+            "url": "https://japansake.or.jp/sakagura/jp/iwate/kikuzakari-shuzou/",
+            "checkedAt": "2026-10-11"
+          },
+          {
+            "id": "retailer",
+            "title": "高橋酒店 — タクシードライバー 純米生原酒 R6BY 仕込9号",
+            "url": "https://takahashi-sake.ocnk.net/product/4656",
+            "checkedAt": "2026-10-11",
+            "versionNote": "参照先はR6BY・仕込9号・720ml（2025年7月瓶詰め）。掲載画像の年度・仕込号との一致は未確認のため、米・精米歩合・度数・日本酒度・酸度は採用していません。"
+          }
+        ],
+        "specificationGaps": {
+          "ricePolishingRatio": "链接中55%只核实为R6BY仕込9号；图中批次不明，留空。",
+          "riceVariety": "链接中かけはし只核实为R6BY仕込9号；图中批次不明，留空。",
+          "abv": "链接中17度只核实为R6BY仕込9号；图中批次不明，留空。",
+          "sakeMeterValue": "链接中+2.8对应R6BY仕込9号，不套用到未知批次。",
+          "acidity": "链接中1.6对应R6BY仕込9号，不套用到未知批次。"
+        }
+      },
+      {
+        "id": "v01-009",
+        "name": "Bovet La Valote Absinthe Émeraude 50cl",
+        "category": "その他",
+        "categorySource": "第1巻/info.txt：名称に「Absinthe」と明記（アブサン）",
+        "url": "https://www.absinthemarket.com/produit/emeraude-bovet-la-valote-50cl/?srsltid=AfmBOoo5mEfjigO03-1wWvvPJOSjpWMYaDoqgJ-q2Kr4mTdqhceouXqN",
+        "notes": null,
+        "images": [
+          {
+            "path": "images/originals/1f526825e05f69ca423843be37ad90807518434e41a07fd6042350d4fd5d2913.jpg",
+            "source": "第1巻/products/9.jpg",
+            "width": 1000,
+            "height": 1000,
+            "hash": "1f526825e05f69ca423843be37ad90807518434e41a07fd6042350d4fd5d2913"
+          }
+        ],
+        "thumbnail": {
+          "path": "images/thumbs/1f526825e05f69ca423843be37ad90807518434e41a07fd6042350d4fd5d2913-800-v1.webp",
+          "source": "第1巻/products/9.jpg",
+          "width": 800,
+          "height": 800,
+          "hash": "1f526825e05f69ca423843be37ad90807518434e41a07fd6042350d4fd5d2913"
+        },
+        "specifications": {
+          "distillery": {
+            "label": "蒸溜所",
+            "value": "Absinthe Bovet La Valote",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "origin": {
+            "label": "原産国・地域",
+            "value": "スイス・Môtiers（Val-de-Travers）",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "style": {
+            "label": "種類",
+            "value": "アブサン（ヴェルト）",
+            "sourceIds": [
+              "retailer"
+            ]
+          },
+          "abv": {
+            "label": "アルコール度数",
+            "value": "77%",
+            "sourceIds": [
+              "official",
+              "retailer"
+            ]
+          },
+          "ingredients": null
+        },
+        "specificationSources": [
+          {
+            "id": "official",
+            "title": "Absinthe Bovet La Valote公式 — Émeraude",
+            "url": "https://absinthe-bovet.ch/",
+            "checkedAt": "2026-10-11",
+            "versionNote": "Émeraudeの77% vol.を参照。同じ77%のSeptante7、54%や65%の別製品とは区別しています。"
+          },
+          {
+            "id": "retailer",
+            "title": "AbsintheMarket — Émeraude 50cl",
+            "url": "https://www.absinthemarket.com/produit/emeraude-bovet-la-valote-50cl/",
+            "checkedAt": "2026-10-11",
+            "versionNote": "50cl製品の銘柄、蒸溜所、77°、Absinthes vertes分類を照合。"
+          }
+        ],
+        "specificationGaps": {
+          "ingredients": "品牌系列的十种植物说明未明确逐款配方，不作为Émeraude完整原料表。"
+        }
+      },
+      {
+        "id": "v01-010",
+        "name": "ブリュードッグ パンクIPA",
+        "category": "ビール",
+        "categorySource": "https://www.brewdog.jp/lineup/ （公式 PUNK IPA 商品一覧、2026-10-11確認）",
+        "url": "https://www.brewdog.jp/lineup/",
+        "notes": null,
+        "images": [
+          {
+            "path": "images/originals/26820ca6fa5a6fdbe1bf3f3af1c4834f89e67d61210751617d2205dac865756b.jpg",
+            "source": "第1巻/products/10.jpg",
+            "width": 1000,
+            "height": 1000,
+            "hash": "26820ca6fa5a6fdbe1bf3f3af1c4834f89e67d61210751617d2205dac865756b"
+          }
+        ],
+        "thumbnail": {
+          "path": "images/thumbs/26820ca6fa5a6fdbe1bf3f3af1c4834f89e67d61210751617d2205dac865756b-800-v1.webp",
+          "source": "第1巻/products/10.jpg",
+          "width": 800,
+          "height": 800,
+          "hash": "26820ca6fa5a6fdbe1bf3f3af1c4834f89e67d61210751617d2205dac865756b"
+        },
+        "specifications": {
+          "brewery": {
+            "label": "ブルワリー",
+            "value": "BREWDOG",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "style": {
+            "label": "ビアスタイル",
+            "value": "インディアペールエール（IPA）",
+            "sourceIds": [
+              "official-story"
+            ]
+          },
+          "abv": {
+            "label": "アルコール度数",
+            "value": "5.5%",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "ibu": null,
+          "origin": null
+        },
+        "specificationSources": [
+          {
+            "id": "official",
+            "title": "BREWDOG日本公式 — PUNK IPA",
+            "url": "https://www.brewdog.jp/lineup/",
+            "checkedAt": "2026-10-11",
+            "versionNote": "日本公式のPUNK IPA 5.5%。提供商品画像のラベルもAlc.5.5%。他地域・別時期の度数や別銘柄の数値は採用していません。"
+          },
+          {
+            "id": "official-story",
+            "title": "BREWDOG日本公式 — PUNK IPA・ブランド紹介",
+            "url": "https://www.brewdog.jp/story/",
+            "checkedAt": "2026-10-11",
+            "versionNote": "PUNK IPAのビアスタイルを参照。ブランドの創業地は、この画像の製品の製造地域を保証するものではありません。"
+          }
+        ],
+        "specificationGaps": {
+          "ibu": "日本公式の商品条目未列 IBU；不采用其他时期配方或其他产品的苦味值。",
+          "origin": "未核实本图对应产品的具体生产地域，不将品牌起源自动等同产地。"
+        }
+      }
+    ],
+    "appearances": [
+      {
+        "id": "v01-001",
+        "productId": "v01-001",
+        "volume": 1,
+        "number": 1,
+        "status": "confirmed",
+        "source": null,
+        "notes": null,
+        "scenes": [
+          {
+            "path": "images/originals/b290fc8d9782858af4c942e95063cecb2678bcb46bb8d57361393f3e8a029a88.png",
+            "source": "第1巻/scenes/1.png",
+            "width": 420,
+            "height": 904,
+            "hash": "b290fc8d9782858af4c942e95063cecb2678bcb46bb8d57361393f3e8a029a88"
+          }
+        ],
+        "textSources": [
+          "第1巻/info.txt"
+        ]
+      },
+      {
+        "id": "v01-002",
+        "productId": "v01-002",
+        "volume": 1,
+        "number": 2,
+        "status": "confirmed",
+        "source": null,
+        "notes": null,
+        "scenes": [
+          {
+            "path": "images/originals/1f7a34077aba1db999252d12ca588f9b35f93ee2bda049d10121ce1061208cff.png",
+            "source": "第1巻/scenes/2.png",
+            "width": 758,
+            "height": 610,
+            "hash": "1f7a34077aba1db999252d12ca588f9b35f93ee2bda049d10121ce1061208cff"
+          }
+        ],
+        "textSources": [
+          "第1巻/info.txt"
+        ]
+      },
+      {
+        "id": "v01-003",
+        "productId": "v01-003",
+        "volume": 1,
+        "number": 3,
+        "status": "confirmed",
+        "source": null,
+        "notes": null,
+        "scenes": [
+          {
+            "path": "images/originals/ffac6d12672562742d9c1fefabc9208ac5078a4fecabde1809a84d1bbb73bfbe.png",
+            "source": "第1巻/scenes/3.png",
+            "width": 494,
+            "height": 674,
+            "hash": "ffac6d12672562742d9c1fefabc9208ac5078a4fecabde1809a84d1bbb73bfbe"
+          }
+        ],
+        "textSources": [
+          "第1巻/info.txt"
+        ]
+      },
+      {
+        "id": "v01-004",
+        "productId": "v01-004",
+        "volume": 1,
+        "number": 4,
+        "status": "confirmed",
+        "source": null,
+        "notes": null,
+        "scenes": [
+          {
+            "path": "images/originals/20cde408ff89f869ba192ef5fcbc066d2b4af80e62747b56eb471755cec7e516.png",
+            "source": "第1巻/scenes/4.png",
+            "width": 518,
+            "height": 470,
+            "hash": "20cde408ff89f869ba192ef5fcbc066d2b4af80e62747b56eb471755cec7e516"
+          }
+        ],
+        "textSources": [
+          "第1巻/info.txt"
+        ]
+      },
+      {
+        "id": "v01-005",
+        "productId": "v01-005",
+        "volume": 1,
+        "number": 5,
+        "status": "confirmed",
+        "source": null,
+        "notes": null,
+        "scenes": [
+          {
+            "path": "images/originals/cb7dbdf9b5b6289a477fe75a75aeca5647aa8cb3f08f376e1bd69f9d50222eed.png",
+            "source": "第1巻/scenes/5.png",
+            "width": 610,
+            "height": 670,
+            "hash": "cb7dbdf9b5b6289a477fe75a75aeca5647aa8cb3f08f376e1bd69f9d50222eed"
+          }
+        ],
+        "textSources": [
+          "第1巻/info.txt"
+        ]
+      },
+      {
+        "id": "v01-006",
+        "productId": "v01-006",
+        "volume": 1,
+        "number": 6,
+        "status": "confirmed",
+        "source": null,
+        "notes": null,
+        "scenes": [
+          {
+            "path": "images/originals/1b1da130c8bf6a6a3191d0ff709941e3005a07af3e182012df97998fbf25af20.png",
+            "source": "第1巻/scenes/6.png",
+            "width": 644,
+            "height": 784,
+            "hash": "1b1da130c8bf6a6a3191d0ff709941e3005a07af3e182012df97998fbf25af20"
+          }
+        ],
+        "textSources": [
+          "第1巻/info.txt"
+        ]
+      },
+      {
+        "id": "v01-007",
+        "productId": "v01-007",
+        "volume": 1,
+        "number": 7,
+        "status": "confirmed",
+        "source": null,
+        "notes": null,
+        "scenes": [
+          {
+            "path": "images/originals/49764a002f52cd3933cd26cce4de3d12679797d20f225faddfc45a55b3854016.png",
+            "source": "第1巻/scenes/7.png",
+            "width": 620,
+            "height": 1110,
+            "hash": "49764a002f52cd3933cd26cce4de3d12679797d20f225faddfc45a55b3854016"
+          }
+        ],
+        "textSources": [
+          "第1巻/info.txt"
+        ]
+      },
+      {
+        "id": "v01-008",
+        "productId": "v01-008",
+        "volume": 1,
+        "number": 8,
+        "status": "confirmed",
+        "source": null,
+        "notes": null,
+        "scenes": [
+          {
+            "path": "images/originals/2e6a7e760f5d6072a1ce168ff759f25abc98bcc08327593a3bc3fc48f9060445.png",
+            "source": "第1巻/scenes/8.png",
+            "width": 356,
+            "height": 440,
+            "hash": "2e6a7e760f5d6072a1ce168ff759f25abc98bcc08327593a3bc3fc48f9060445"
+          }
+        ],
+        "textSources": [
+          "第1巻/info.txt"
+        ]
+      },
+      {
+        "id": "v01-009",
+        "productId": "v01-009",
+        "volume": 1,
+        "number": 9,
+        "status": "confirmed",
+        "source": null,
+        "notes": null,
+        "scenes": [
+          {
+            "path": "images/originals/bf800eb513b13cbdba4318a631fc8696dbc0ea7e7c66a3b25837a36d1f8d3e3a.png",
+            "source": "第1巻/scenes/9.png",
+            "width": 650,
+            "height": 718,
+            "hash": "bf800eb513b13cbdba4318a631fc8696dbc0ea7e7c66a3b25837a36d1f8d3e3a"
+          }
+        ],
+        "textSources": [
+          "第1巻/info.txt"
+        ]
+      },
+      {
+        "id": "v01-010",
+        "productId": "v01-010",
+        "volume": 1,
+        "number": 10,
+        "status": "confirmed",
+        "source": null,
+        "notes": null,
+        "scenes": [
+          {
+            "path": "images/originals/7441700081e82d0cd1c4a910e69d9eef37533e0c99d331cf2dfa8f9301d91352.png",
+            "source": "第1巻/scenes/10.png",
+            "width": 960,
+            "height": 742,
+            "hash": "7441700081e82d0cd1c4a910e69d9eef37533e0c99d331cf2dfa8f9301d91352"
+          }
+        ],
+        "textSources": [
+          "第1巻/info.txt"
+        ]
+      }
+    ]
+  },
+  "manual": {
+    "products": {
+      "v01-001": {
+        "category": "ワイン",
+        "categorySource": "第1巻/info.txt：名称に「秩父ワイン」と明記",
+        "specifications": {
+          "manufacturer": {
+            "label": "製造元",
+            "value": "有限会社秩父ワイン",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "style": {
+            "label": "種類",
+            "value": "ロゼワイン",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "grapeVariety": {
+            "label": "ブドウ品種",
+            "value": "巨峰",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "grapeOrigin": {
+            "label": "ブドウ収穫地",
+            "value": "山梨県",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "vintage": {
+            "label": "醸造年",
+            "value": "ノンヴィンテージ",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "abv": null
+        },
+        "specificationSources": [
+          {
+            "id": "official",
+            "title": "秩父ワイン公式 — 源作印 巨峰 720ml",
+            "url": "https://chichibuwine.co.jp/product/%E6%BA%90%E4%BD%9C%E5%8D%B0%E3%80%80%E5%B7%A8%E5%B3%B0%E3%80%80720ml/",
+            "checkedAt": "2026-10-11",
+            "versionNote": "公式掲載のノンヴィンテージ品。ブドウ収穫地は製造元所在地とは異なります。"
+          }
+        ],
+        "specificationGaps": {
+          "abv": "官方具体商品页面未列酒精度；不使用其他源作印酒款的数值。"
+        }
+      },
+      "v01-002": {
+        "category": "ビール",
+        "categorySource": "第1巻/info.txt：名称に「秩父麦酒 ペールエール」と明記",
+        "specifications": {
+          "brewery": {
+            "label": "ブルワリー",
+            "value": "秩父麦酒（合同会社 BEAR MEET BEER）",
+            "sourceIds": [
+              "brand-release"
+            ]
+          },
+          "style": {
+            "label": "ビアスタイル",
+            "value": "American Pale Ale",
+            "sourceIds": [
+              "official-shop",
+              "brand-release"
+            ]
+          },
+          "origin": {
+            "label": "ブルワリー所在地",
+            "value": "埼玉県秩父市下吉田",
+            "sourceIds": [
+              "brand-release"
+            ]
+          },
+          "abv": null,
+          "ibu": null
+        },
+        "specificationSources": [
+          {
+            "id": "official-shop",
+            "title": "秩父麦酒公式ショップ — 華熊 American Pale Ale",
+            "url": "https://chichibubeer.shop-pro.jp/?pid=151056744",
+            "checkedAt": "2026-10-11",
+            "versionNote": "年齢確認画面の商品名を確認。仕様本文は取得できませんでした。"
+          },
+          {
+            "id": "brand-release",
+            "title": "BEAR MEET BEER公式発表 — 秩父麦酒・既存商品の紹介",
+            "url": "https://prtimes.jp/main/html/rd/p/000000001.000105909.html",
+            "checkedAt": "2026-10-11",
+            "versionNote": "華熊の名称・スタイル、醸造所と会社情報を参照。本文の5.0%は別商品「彩の熊のラガー」の値です。"
+          }
+        ],
+        "specificationGaps": {
+          "abv": "官方店年龄门限未返回规格；品牌发布中5.0%属于彩の熊のラガー，未套用。",
+          "ibu": "检索到评价网站的25/50等不同值，无足够可靠的同版本官方证据。"
+        }
+      },
+      "v01-003": {
+        "category": "日本酒",
+        "categorySource": "第1巻/info.txt：名称に「純米大吟醸」と明記",
+        "specifications": {
+          "manufacturer": {
+            "label": "製造元",
+            "value": "株式会社矢尾本店",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "origin": {
+            "label": "蔵元所在地",
+            "value": "埼玉県秩父市",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "designation": {
+            "label": "特定名称",
+            "value": "純米大吟醸",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "ricePolishingRatio": {
+            "label": "精米歩合",
+            "value": "50%",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "riceVariety": {
+            "label": "原料米",
+            "value": "美山錦",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "abv": {
+            "label": "アルコール度数",
+            "value": "16%",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "sakeMeterValue": null,
+          "acidity": null
+        },
+        "specificationSources": [
+          {
+            "id": "official",
+            "title": "秩父錦公式 — 純米大吟醸",
+            "url": "https://chichibunishiki.com/meishu/#a03",
+            "checkedAt": "2026-10-11",
+            "versionNote": "「純米大吟醸 1.8L/720ml」の欄を参照。特選大吟醸・大吟醸・純米吟醸の値は使用していません。現行公式掲載仕様です。"
+          }
+        ],
+        "specificationGaps": {
+          "sakeMeterValue": "官方该商品条目未提供日本酒度。",
+          "acidity": "官方该商品条目未提供酸度。"
+        }
+      },
+      "v01-005": {
+        "category": "ビール",
+        "categorySource": "https://www.asahibeer.co.jp/superdry/ （公式商品ページ、2026-10-11確認）",
+        "specifications": {
+          "brewery": {
+            "label": "ブルワリー",
+            "value": "アサヒビール",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "abv": {
+            "label": "アルコール度数",
+            "value": "5%",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "ingredients": {
+            "label": "原材料",
+            "value": "麦芽、ホップ、米、コーン、スターチ",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "style": null,
+          "ibu": null,
+          "origin": null
+        },
+        "specificationSources": [
+          {
+            "id": "official",
+            "title": "アサヒビール公式 — アサヒスーパードライ 商品情報",
+            "url": "https://www.asahibeer.co.jp/products/beer/superdry/superdry.html",
+            "checkedAt": "2026-10-11",
+            "versionNote": "日本向け通常品の現行商品情報。ドライクリスタル等の別製品は対象外です。画像の製造時期は特定していません。原材料の製造国の割合表示は変更される場合があります。"
+          }
+        ],
+        "specificationGaps": {
+          "style": "官方此商品页未明确具体啤酒风格，不自行填入 Pilsner。",
+          "ibu": "官方商品页未列 IBU。",
+          "origin": "未将麦芽原料产地误当作成品原产地。"
+        }
+      },
+      "v01-006": {
+        "category": "焼酎",
+        "categorySource": "https://www.kurokihonten.co.jp/shochu/ （公式焼酎一覧、2026-10-11確認）",
+        "specifications": {
+          "manufacturer": {
+            "label": "製造元",
+            "value": "株式会社黒木本店",
+            "sourceIds": [
+              "company"
+            ]
+          },
+          "origin": {
+            "label": "蔵元所在地",
+            "value": "宮崎県児湯郡高鍋町",
+            "sourceIds": [
+              "company"
+            ]
+          },
+          "style": {
+            "label": "種類",
+            "value": "麦焼酎",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "ingredients": {
+            "label": "原材料",
+            "value": "麦、麦麹",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "abv": {
+            "label": "アルコール度数",
+            "value": "40%",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "aging": null
+        },
+        "specificationSources": [
+          {
+            "id": "official",
+            "title": "黒木本店公式 — 百年の孤独",
+            "url": "https://www.kurokihonten.co.jp/shochu/",
+            "checkedAt": "2026-10-11",
+            "versionNote": "通常の「百年の孤独」720mlを参照。別欄の「百年のボトル」とは区別しています。"
+          },
+          {
+            "id": "company",
+            "title": "黒木本店公式 — 会社情報",
+            "url": "https://www.kurokihonten.co.jp/company/",
+            "checkedAt": "2026-10-11"
+          }
+        ],
+        "specificationGaps": {
+          "aging": "所查官方商品页未列明熟成年数与桶种；不从风味中的オーク字样推断桶种。"
+        }
+      },
+      "v01-007": {
+        "category": "焼酎",
+        "categorySource": "第1巻/info.txt：名称に「芋焼酎」と明記",
+        "specifications": {
+          "manufacturer": {
+            "label": "製造元",
+            "value": "塩田酒造株式会社",
+            "sourceIds": [
+              "association"
+            ]
+          },
+          "origin": {
+            "label": "蔵元所在地",
+            "value": "鹿児島県薩摩川内市里町里",
+            "sourceIds": [
+              "association"
+            ]
+          },
+          "abv": null,
+          "ingredients": {
+            "label": "原材料",
+            "value": "黄金千貫、米麹",
+            "sourceIds": [
+              "authorized-retailer"
+            ]
+          },
+          "style": {
+            "label": "種類",
+            "value": "芋焼酎",
+            "sourceIds": [
+              "authorized-retailer"
+            ]
+          },
+          "distillationMethod": {
+            "label": "蒸留方式",
+            "value": "常圧蒸留",
+            "sourceIds": [
+              "authorized-retailer"
+            ]
+          },
+          "koji": {
+            "label": "麹",
+            "value": "黒麹",
+            "sourceIds": [
+              "authorized-retailer"
+            ]
+          }
+        },
+        "specificationSources": [
+          {
+            "id": "association",
+            "title": "鹿児島県酒造組合 — 六代目百合・蔵元情報",
+            "url": "https://www.honkakushochu.or.jp/product/1547/",
+            "checkedAt": "2026-10-11"
+          },
+          {
+            "id": "authorized-retailer",
+            "title": "正規特約店・登酒店 — 六代目百合 25度／35度",
+            "url": "https://www.nobori-sake.com/shouhin/syoutyuu/siota/siotasyuzou.html",
+            "checkedAt": "2026-10-11",
+            "versionNote": "25度・35度の通常品は、原材料・麹・蒸留方式の記載が共通です。画像の度数は特定できないため、アルコール度数は掲載していません。原酒「風に吹かれて」とは区別しています。"
+          }
+        ],
+        "specificationGaps": {
+          "abv": "可信酒商显示25度与35度产品；现有图片不能可靠辨读度数，不选择其中一值。"
+        }
+      },
+      "v01-008": {
+        "category": "日本酒",
+        "categorySource": "第1巻/info.txt：名称に「純米生原酒」と明記",
+        "specifications": {
+          "manufacturer": {
+            "label": "製造元",
+            "value": "喜久盛酒造株式会社",
+            "sourceIds": [
+              "association"
+            ]
+          },
+          "origin": {
+            "label": "蔵元所在地",
+            "value": "岩手県北上市",
+            "sourceIds": [
+              "association"
+            ]
+          },
+          "designation": {
+            "label": "特定名称",
+            "value": "純米酒",
+            "sourceIds": [
+              "retailer"
+            ]
+          },
+          "style": {
+            "label": "種類",
+            "value": "生原酒",
+            "sourceIds": [
+              "retailer"
+            ]
+          },
+          "ricePolishingRatio": null,
+          "riceVariety": null,
+          "abv": null,
+          "sakeMeterValue": null,
+          "acidity": null
+        },
+        "specificationSources": [
+          {
+            "id": "association",
+            "title": "日本酒造組合中央会 — 喜久盛酒造・タクシードライバー",
+            "url": "https://japansake.or.jp/sakagura/jp/iwate/kikuzakari-shuzou/",
+            "checkedAt": "2026-10-11"
+          },
+          {
+            "id": "retailer",
+            "title": "高橋酒店 — タクシードライバー 純米生原酒 R6BY 仕込9号",
+            "url": "https://takahashi-sake.ocnk.net/product/4656",
+            "checkedAt": "2026-10-11",
+            "versionNote": "参照先はR6BY・仕込9号・720ml（2025年7月瓶詰め）。掲載画像の年度・仕込号との一致は未確認のため、米・精米歩合・度数・日本酒度・酸度は採用していません。"
+          }
+        ],
+        "specificationGaps": {
+          "ricePolishingRatio": "链接中55%只核实为R6BY仕込9号；图中批次不明，留空。",
+          "riceVariety": "链接中かけはし只核实为R6BY仕込9号；图中批次不明，留空。",
+          "abv": "链接中17度只核实为R6BY仕込9号；图中批次不明，留空。",
+          "sakeMeterValue": "链接中+2.8对应R6BY仕込9号，不套用到未知批次。",
+          "acidity": "链接中1.6对应R6BY仕込9号，不套用到未知批次。"
+        }
+      },
+      "v01-009": {
+        "category": "その他",
+        "categorySource": "第1巻/info.txt：名称に「Absinthe」と明記（アブサン）",
+        "specifications": {
+          "distillery": {
+            "label": "蒸溜所",
+            "value": "Absinthe Bovet La Valote",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "origin": {
+            "label": "原産国・地域",
+            "value": "スイス・Môtiers（Val-de-Travers）",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "style": {
+            "label": "種類",
+            "value": "アブサン（ヴェルト）",
+            "sourceIds": [
+              "retailer"
+            ]
+          },
+          "abv": {
+            "label": "アルコール度数",
+            "value": "77%",
+            "sourceIds": [
+              "official",
+              "retailer"
+            ]
+          },
+          "ingredients": null
+        },
+        "specificationSources": [
+          {
+            "id": "official",
+            "title": "Absinthe Bovet La Valote公式 — Émeraude",
+            "url": "https://absinthe-bovet.ch/",
+            "checkedAt": "2026-10-11",
+            "versionNote": "Émeraudeの77% vol.を参照。同じ77%のSeptante7、54%や65%の別製品とは区別しています。"
+          },
+          {
+            "id": "retailer",
+            "title": "AbsintheMarket — Émeraude 50cl",
+            "url": "https://www.absinthemarket.com/produit/emeraude-bovet-la-valote-50cl/",
+            "checkedAt": "2026-10-11",
+            "versionNote": "50cl製品の銘柄、蒸溜所、77°、Absinthes vertes分類を照合。"
+          }
+        ],
+        "specificationGaps": {
+          "ingredients": "品牌系列的十种植物说明未明确逐款配方，不作为Émeraude完整原料表。"
+        }
+      },
+      "v01-010": {
+        "category": "ビール",
+        "categorySource": "https://www.brewdog.jp/lineup/ （公式 PUNK IPA 商品一覧、2026-10-11確認）",
+        "specifications": {
+          "brewery": {
+            "label": "ブルワリー",
+            "value": "BREWDOG",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "style": {
+            "label": "ビアスタイル",
+            "value": "インディアペールエール（IPA）",
+            "sourceIds": [
+              "official-story"
+            ]
+          },
+          "abv": {
+            "label": "アルコール度数",
+            "value": "5.5%",
+            "sourceIds": [
+              "official"
+            ]
+          },
+          "ibu": null,
+          "origin": null
+        },
+        "specificationSources": [
+          {
+            "id": "official",
+            "title": "BREWDOG日本公式 — PUNK IPA",
+            "url": "https://www.brewdog.jp/lineup/",
+            "checkedAt": "2026-10-11",
+            "versionNote": "日本公式のPUNK IPA 5.5%。提供商品画像のラベルもAlc.5.5%。他地域・別時期の度数や別銘柄の数値は採用していません。"
+          },
+          {
+            "id": "official-story",
+            "title": "BREWDOG日本公式 — PUNK IPA・ブランド紹介",
+            "url": "https://www.brewdog.jp/story/",
+            "checkedAt": "2026-10-11",
+            "versionNote": "PUNK IPAのビアスタイルを参照。ブランドの創業地は、この画像の製品の製造地域を保証するものではありません。"
+          }
+        ],
+        "specificationGaps": {
+          "ibu": "日本公式の商品条目未列 IBU；不采用其他时期配方或其他产品的苦味值。",
+          "origin": "未核实本图对应产品的具体生产地域，不将品牌起源自动等同产地。"
+        }
+      },
+      "v01-004": {
+        "specifications": {
+          "manufacturer": null,
+          "origin": null,
+          "grapeVariety": null,
+          "abv": null,
+          "aging": null
+        },
+        "specificationSources": [],
+        "specificationGaps": {
+          "identityVersion": "2026-10-11 核对指定 Dragee W-SK18070901 商品页：明确为 Brut Nature NV，未见 Reserva 标记。其生产者、葡萄品种与 DO Cava 资料仅确认该 NV 条目，尚无跨版本共同属性证据；不套用至原 Reserva 酒款。保留原名称、confirmed、空分类及空规格。旧 Roger Goulart URL 仅在历史资料中保留。",
+          "manufacturer": "尚未核实精确 Reserva 版本的生产者。",
+          "origin": "尚未核实精确 Reserva 版本的产区。",
+          "grapeVariety": "近似 Brut Nature NV 的葡萄资料未套用。",
+          "abv": "搜索结果不同版本出现11.5%/12.5%，未确定对应版本，留空。",
+          "aging": "未找到精确 Reserva 版本的明确熟成规格，不从法定分类推定。"
+        }
+      }
+    },
+    "appearances": {
+      "v01-004": {
+        "notes": null,
+        "status": "confirmed"
+      },
+      "v01-001": {
+        "status": "confirmed"
+      },
+      "v01-002": {
+        "status": "confirmed"
+      },
+      "v01-003": {
+        "status": "confirmed"
+      },
+      "v01-005": {
+        "status": "confirmed"
+      },
+      "v01-006": {
+        "status": "confirmed"
+      },
+      "v01-007": {
+        "status": "confirmed"
+      },
+      "v01-008": {
+        "status": "confirmed"
+      },
+      "v01-009": {
+        "status": "confirmed"
+      },
+      "v01-010": {
+        "status": "confirmed"
+      }
+    }
+  }
+}

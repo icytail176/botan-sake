@@ -15,7 +15,7 @@ const index = products.findIndex(p=>p.id===product.id), previous = products[inde
 ---
 <Layout title={product.name} image={product.thumbnail?.path}>
   <div class="detail wrap">
-    <nav class="breadcrumb" aria-label="パンくずリスト"><a href={withBase()}>ホーム</a><span aria-hidden="true">/</span><a href={withBase('#catalog')}>酒図鑑</a><span aria-hidden="true">/</span><span>お酒の手帖</span></nav>
+    <nav class="breadcrumb" aria-label="パンくずリスト"><a href={withBase('#catalog')}>酒図鑑</a><span aria-hidden="true">/</span><span>お酒の手帖</span></nav>
     <header class="detail-heading">
       <p class="eyebrow">SAKE NOTE</p>
       {product.category && <span class="detail-category">{product.category}</span>}
@@ -37,12 +37,23 @@ const index = products.findIndex(p=>p.id===product.id), previous = products[inde
             </tr>)}
           </tbody></table>
         </section>}
-        <p class="appearance-volumes"><span>登場巻：</span>{volumes.map(v=>`第${v}巻`).join('、')}</p>
+
         {pending.length>0 && <p class="product-notes">作品との照合：{[...new Set(pending.map(a=>statusLabel(a.status)))].join(' / ')}</p>}
         {product.notes && <p class="product-notes">{product.notes}</p>}
         {appearances.some(a=>a.status==='uncertain') && <p class="notice">この銘柄は同定が未確定です。作品の描写と商品資料を照合する必要があります。</p>}
       </div>
     </section>
+    {product.description && <section class="product-reading" data-module="description" aria-labelledby="description-title">
+      <h2 id="description-title">このお酒について</h2><p data-sourced-text>{product.description.text}<span class="specification-citations">{product.description.sourceIds.map(id=><a href={`#reference-${sourceNumber(id)}`} aria-label={`商品紹介の資料 ${sourceNumber(id)}`}>[{sourceNumber(id)}]</a>)}</span></p>
+      {product.description.note && <small class="reading-note">{product.description.note}</small>}
+    </section>}
+    {product.tastingNotes.length>0 && <section class="product-reading" data-module="tastingNotes" aria-labelledby="taste-title">
+      <h2 id="taste-title">香りと味わい</h2>{product.tastingNotes.map(note=><div class="reading-entry"><p class="reading-attribution">{note.attribution}</p><p data-sourced-text>{note.text}<span class="specification-citations">{note.sourceIds.map(id=><a href={`#reference-${sourceNumber(id)}`} aria-label={`風味の資料 ${sourceNumber(id)}`}>[{sourceNumber(id)}]</a>)}</span></p>{note.note && <small class="reading-note">{note.note}</small>}</div>)}
+    </section>}
+    {product.background.length>0 && <section class="product-reading" data-module="background" aria-labelledby="background-title">
+      <h2 id="background-title">お酒の背景</h2>{product.background.map(note=><div class="reading-entry"><p class="reading-attribution">{note.scope==='brand' ? '蔵元・ブランドの歩み' : '銘柄の由来・歩み'}</p><p data-sourced-text>{note.text}<span class="specification-citations">{note.sourceIds.map(id=><a href={`#reference-${sourceNumber(id)}`} aria-label={`背景の資料 ${sourceNumber(id)}`}>[{sourceNumber(id)}]</a>)}</span></p>{note.note && <small class="reading-note">{note.note}</small>}</div>)}
+    </section>}
+    <p class="appearance-volumes"><span>登場巻：</span>{volumes.map(v=>`第${v}巻`).join('、')}</p>
     <section class="appearances" aria-labelledby="appearance-title">
       <div class="section-heading"><div><p class="eyebrow">IN THE STORY</p><h2 id="appearance-title">原作での登場シーン</h2></div><p class="section-caption">作品の描写をたどる、登場の記録。</p></div>
       {appearances.map(a=><article class="appearance">

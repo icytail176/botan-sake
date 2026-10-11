@@ -10,6 +10,14 @@ const online=!['127.0.0.1','localhost'].includes(target.hostname);
 const screenshots=`reports/screenshots/${online?'online':'local'}`;
 const canonicalHome='https://icytail176.github.io/botan-sake/';
 const results=[];
+async function loadImages(page,selector){
+ // Scroll as a reader would: longer NV specifications put lazy scenes beyond
+ // the initial loading threshold. decode() alone does not start a lazy image.
+ for(const img of await page.locator(selector).all()){
+  await img.scrollIntoViewIfNeeded();await img.evaluate(i=>i.decode());
+ }
+ await page.evaluate(()=>scrollTo(0,0));
+}
 const catalog=JSON.parse(await readFile('data/catalog.json','utf8'));
 const products=[...catalog.products].sort((a,b)=>{const x=catalog.appearances.find(p=>p.productId===a.id),y=catalog.appearances.find(p=>p.productId===b.id);return x.volume-y.volume || x.number-y.number;});
 await mkdir(screenshots,{recursive:true});
@@ -23,12 +31,33 @@ try {
   assert.match(await page.title(),/ぼたんの酒手帖/);
   assert.equal(await page.locator('html').getAttribute('lang'),'ja');
   await page.keyboard.press('Tab');assert.equal(await page.locator('.skip-link').evaluate(a=>a===document.activeElement),true);await page.locator('.intro .eyebrow').click();
-  await page.locator('.sake-card img').evaluateAll(imgs=>Promise.all(imgs.map(img=>img.decode())));
+  await loadImages(page,'.sake-card img');
   const info=await page.evaluate(()=>({ viewport:innerWidth, page:document.documentElement.scrollWidth, columns:getComputedStyle(document.querySelector('.sake-grid')).gridTemplateColumns.split(' ').length, colorScheme:getComputedStyle(document.documentElement).colorScheme, square:[...document.querySelectorAll('.product-square')].every(e=>Math.abs(e.getBoundingClientRect().width-e.getBoundingClientRect().height)<1), images:[...document.images].filter(i=>i.hasAttribute('src')).every(i=>i.complete&&i.naturalWidth>0), contain:[...document.querySelectorAll('.product-square img')].every(e=>getComputedStyle(e).objectFit==='contain'), white:[...document.querySelectorAll('.product-square')].every(e=>getComputedStyle(e).backgroundColor==='rgb(255, 255, 255)') }));
   assert(info.page<=width,`Home overflow ${width}: ${info.page}`);assert.equal(info.columns,width<700?2:width<=1050?3:4);assert(info.square&&info.contain&&info.images&&info.white);assert.equal(info.colorScheme,'light');
   assert.equal(await page.locator('.uncertain-tag').count(),catalog.products.filter(p=>catalog.appearances.some(a=>a.productId===p.id&&a.status!=='confirmed')).length);
   assert.equal(await page.locator('#result-count').textContent(),`全 ${products.length} 銘柄を表示`);
+  assert.equal(await page.locator('.site-header nav a').count(),1);
+  assert.equal(await page.locator('.site-header nav').innerText(),'この手帖について');
+  assert.equal(await page.locator('.brand').getAttribute('href'),'/botan-sake/');
+  await page.locator('.brand').focus();
+  assert.equal(await page.locator('.brand').evaluate(e=>getComputedStyle(e).outlineStyle),'solid');
+  const selectStyles=await page.locator('select').evaluateAll(es=>es.map(e=>({appearance:getComputedStyle(e).appearance,position:getComputedStyle(e).backgroundPosition,size:getComputedStyle(e).backgroundSize,padding:parseFloat(getComputedStyle(e).paddingRight),width:e.clientWidth,right:e.getBoundingClientRect().right})));
+  for(const style of selectStyles){assert.equal(style.appearance,'none');assert(style.position.includes('18px')&&style.position.includes('50%'));assert.equal(style.size,'12px 8px');assert(style.padding>=44);assert(style.right<=width);}
+  await page.locator('#volume').focus();
+  assert(await page.locator('#volume').evaluate(e=>e===document.activeElement && e instanceof HTMLSelectElement && !e.disabled));
+  await page.keyboard.press('Tab');await page.keyboard.press('Shift+Tab');
+  assert(await page.locator('#volume').evaluate(e=>e===document.activeElement),'Select keyboard focus remains reachable');
+  // macOS Chrome's native popup does not commit arrow-key choices through this
+  // automation environment, even on an unstyled standalone select. Record the
+  // limitation; do not turn selectOption into evidence of keyboard selection.
+  await page.locator('#volume').selectOption('all');
+  await page.locator('.intro .eyebrow').click();
   await page.screenshot({path:`${screenshots}/home-${width}.png`,fullPage:true});
+  await page.locator('#search').fill('ブリュット・ナチュレ NV');assert.equal(await page.locator('.sake-card:visible').count(),1);
+  await page.locator('#search').fill('');await page.getByRole('button',{name:'ワイン',exact:true}).click();
+  assert.equal(await page.locator('.sake-card:visible').count(),products.filter(p=>p.category==='ワイン').length);
+  assert(await page.locator('.sake-card:visible').filter({hasText:'カヴァ ヴィーニャ・アデライダ'}).isVisible());
+  await page.getByRole('button',{name:'すべて',exact:true}).click();
   await page.locator('#search').fill('ちちぶ');assert.equal(await page.locator('.sake-card:visible').count(),0); // kanji readings are not invented
   await page.locator('#search').fill('秩父');assert.equal(await page.locator('.sake-card:visible').count(),3);assert.equal(await page.locator('#result-count').textContent(),`${products.length} 銘柄中 3 銘柄を表示`);
   await page.locator('#search').fill('ﾊﾟﾝｸipa');assert.equal(await page.locator('.sake-card:visible').count(),1);
@@ -49,7 +78,7 @@ try {
   await page.goBack();assert.equal(await page.locator('.sake-card:visible').count(),3);assert.equal(await page.locator('[data-filter="ビール"]').getAttribute('aria-pressed'),'true');
   await page.locator('#search').fill('zzzz-nonexistent');assert(await page.locator('#empty-state').isVisible());await page.getByRole('button',{name:'絞り込みをリセット'}).click();assert.equal(await page.locator('.sake-card:visible').count(),products.length);
   await page.goto(`${home}sake/v01-001/`,{waitUntil:'networkidle'});
-  await page.locator('.detail-photo img,.scene-gallery img').evaluateAll(imgs=>Promise.all(imgs.map(i=>i.decode())));
+  await loadImages(page,'.detail-photo img,.scene-gallery img');
   await page.screenshot({path:`${screenshots}/detail-${width}.png`,fullPage:true});
   await page.locator('.scene-gallery a').click();await page.screenshot({path:`${screenshots}/lightbox-${width}.png`});
   await page.getByRole('button',{name:'原寸で見る',exact:true}).click();
@@ -61,10 +90,11 @@ try {
   // Every static detail route, including the longest name, fits and loads its images.
   for(const [index,product] of products.entries()) {
    await page.goto(`${home}sake/${product.id}/`,{waitUntil:'networkidle'});
-   await page.locator('img[src]').evaluateAll(imgs=>Promise.all(imgs.map(i=>i.decode())));
+   await loadImages(page,'img[src]');
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Detail overflow ${width}/${product.id}`);
    assert(await page.evaluate(()=>[...document.images].filter(i=>i.hasAttribute('src')).every(i=>i.complete&&i.naturalWidth>0)));
    assert.equal(await page.locator('h1').innerText(),product.name);
+   if(product.id==='v01-004')assert(!(await page.locator('main').innerText()).includes('レセルバ'),'Obsolete Reserva name on NV detail');
    assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'),`${canonicalHome}sake/${product.id}/`);
    if(product.url)assert.equal(await page.locator('.external-link').getAttribute('href'),product.url);
    assert(!/rogergoulart\.ne\.jp|image-host|wsrv\.nl/.test(await page.content()));
@@ -77,6 +107,19 @@ try {
    const visibleText=await page.locator('main').innerText();
    assert(!/\bv\d{2}-\d{3}\b|\b00[1-9]\b|\b010\b|資料番号|話数|ページは未登録|第\d+話|出典/.test(visibleText),`Internal/source metadata visible ${product.id}`);
    assert.equal(await page.locator('.appearance-volumes').innerText(),`登場巻：${[...new Set(appearances.map(a=>a.volume))].map(v=>`第${v}巻`).join('、')}`);
+   const modules={description:product.description?[product.description]:[],tastingNotes:product.tastingNotes,background:product.background};
+   for(const [field,entries]of Object.entries(modules)){
+    const module=page.locator(`[data-module="${field}"]`);assert.equal(await module.count(),entries.length?1:0);
+    if(!entries.length)continue;
+    assert(await module.evaluate(e=>e.scrollWidth<=e.clientWidth && e.getBoundingClientRect().right<=innerWidth));
+    const paragraphs=module.locator('[data-sourced-text]');assert.equal(await paragraphs.count(),entries.length);
+    for(const [i,entry]of entries.entries()){
+     const paragraph=paragraphs.nth(i);assert((await paragraph.innerText()).startsWith(entry.text));
+     if(entry.attribution)assert((await module.innerText()).includes(entry.attribution));
+     if(entry.note)assert((await module.innerText()).includes(entry.note));
+     for(const id of entry.sourceIds){const n=product.specificationSources.findIndex(s=>s.id===id)+1;assert.equal(await paragraph.locator(`a[href="#reference-${n}"]`).count(),1);}
+    }
+   }
    const specifications=Object.entries(product.specifications).filter(([,s])=>s!==null);
    assert.equal(await page.locator('.specification-table tr').count(),specifications.length);
    assert.equal(await page.locator('.product-specifications').count(),specifications.length?1:0);
@@ -95,12 +138,14 @@ try {
    assert.deepEqual(navLinks,[...(products[index-1]?[`/botan-sake/sake/${products[index-1].id}/`]:[]),'/botan-sake/#catalog',...(products[index+1]?[`/botan-sake/sake/${products[index+1].id}/`]:[])]);
    for(const image of await page.locator('.scene-gallery img').all()){assert(await image.evaluate(i=>Math.abs(i.getBoundingClientRect().width/i.getBoundingClientRect().height-i.naturalWidth/i.naturalHeight)<.01));}
    await page.screenshot({path:`${screenshots}/${product.id}-${width}.png`,fullPage:true});
+   await page.locator('.brand').click();await page.waitForURL(home);
   }
   await page.goto(`${home}sake/v01-005/`);await page.getByRole('link',{name:/次のお酒/}).click();await page.waitForURL(/sake\/v01-006/);await page.getByRole('link',{name:/前のお酒/}).click();await page.waitForURL(/sake\/v01-005/);
 
   await page.goto(`${home}about/`);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'),`${canonicalHome}about/`);
   assert.equal(await page.getByRole('link',{name:'GitHub Issues',exact:true}).getAttribute('href'),'https://github.com/icytail176/botan-sake/issues');
+  await page.locator('.brand').click();await page.waitForURL(home);
   const sitemap=await context.request.get(`${home}sitemap.xml`);assert.equal(sitemap.status(),200);
   const locations=[...(await sitemap.text()).matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);
   assert.deepEqual(locations,[canonicalHome,`${canonicalHome}about/`,...catalog.products.map(p=>`${canonicalHome}sake/${p.id}/`)]);
@@ -110,9 +155,10 @@ try {
   await page.goto(`${home}404.html`,{waitUntil:'networkidle'});
   assert.equal(await page.locator('meta[name=robots]').getAttribute('content'),'noindex');
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+  await page.locator('.brand').click();await page.waitForURL(home);await page.goto(`${home}404.html`);
   await page.getByRole('link',{name:'酒図鑑へもどる →',exact:true}).click();await page.waitForURL(home);
   assert.equal(errors.length,0,errors.join('\n'));assert.equal(failed.length,0,failed.join('\n'));
-  results.push({width,...info,search:true,category:true,volume:true,emptyReset:true,historyRestore:true,lightboxClose:true,escape:true,focusRestored:true,naturalAspectRatio:true,longImageScrollable:scrollable.scroll>scrollable.client,detailRoutes:products.length,backdropClose:true,keyboardTrap:true,keyboardOpen:true,previousNext:true,matchingAllSourceImages:true,confirmedStateUI:true,hiddenInternalIDs:true,volumeOnly:true,sourcedSpecifications:true,noEmptySpecificationRows:true,responsiveTables:true,productLinks:true,canonical:true,sitemap:true,aboutFeedback:true,custom404:true,errors,failed});
+  results.push({width,...info,search:true,category:true,volume:true,emptyReset:true,historyRestore:true,lightboxClose:true,escape:true,focusRestored:true,naturalAspectRatio:true,longImageScrollable:scrollable.scroll>scrollable.client,detailRoutes:products.length,backdropClose:true,keyboardTrap:true,keyboardOpen:true,previousNext:true,matchingAllSourceImages:true,confirmedStateUI:true,hiddenInternalIDs:true,volumeOnly:true,sourcedSpecifications:true,noEmptySpecificationRows:true,responsiveTables:true,productLinks:true,canonical:true,sitemap:true,aboutFeedback:true,custom404:true,sourcedProse:true,noEmptyReadingModules:true,simplifiedHeader:true,brandReturnsHome:true,keyboardFocus:true,keyboardSelect:'native popup commit not verified: macOS automation limitation',selectStyles,errors,failed});
   console.log(`PASS ${width}px: ${info.columns} columns, no overflow, all interactions and 10 routes`);
   await context.close();
  }

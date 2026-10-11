@@ -1,0 +1,152 @@
+{
+  "approvedAt": "2026-10-11",
+  "reason": "用户明确授权记录与Dragee W-SK18070901 NV对齐；不独立证明漫画版本。",
+  "productId": "v01-004",
+  "expectedManual": {
+    "specifications": {
+      "manufacturer": {
+        "label": "製造元",
+        "value": "ボデガス・ロペス・モレナス",
+        "sourceIds": [
+          "dragee"
+        ]
+      },
+      "style": {
+        "label": "種類",
+        "value": "白スパークリングワイン",
+        "sourceIds": [
+          "dragee"
+        ]
+      },
+      "origin": {
+        "label": "原産国",
+        "value": "スペイン",
+        "sourceIds": [
+          "dragee"
+        ]
+      },
+      "appellation": {
+        "label": "原産地呼称",
+        "value": "DOカヴァ",
+        "sourceIds": [
+          "dragee"
+        ]
+      },
+      "grapeVariety": {
+        "label": "ブドウ品種",
+        "value": "マカベオ、パレリャーダ",
+        "sourceIds": [
+          "dragee"
+        ]
+      },
+      "vintage": {
+        "label": "ヴィンテージ",
+        "value": "NV（ノンヴィンテージ）",
+        "sourceIds": [
+          "dragee"
+        ]
+      },
+      "volume": {
+        "label": "容量",
+        "value": "750ml",
+        "sourceIds": [
+          "specialist-nv"
+        ]
+      },
+      "abv": {
+        "label": "アルコール度数",
+        "value": "11.5%",
+        "sourceIds": [
+          "specialist-nv"
+        ],
+        "note": "酒商掲載のNV仕様（製造ロット未記載）。"
+      },
+      "grapeRatio": {
+        "label": "ブドウ品種の比率",
+        "value": "マカベオ90%／パレリャーダ10%",
+        "sourceIds": [
+          "specialist-nv"
+        ],
+        "note": "酒商掲載のNV仕様（製造ロット未記載）。"
+      },
+      "brewingMethod": {
+        "label": "醸造方法",
+        "value": "シャンパーニュ製法",
+        "sourceIds": [
+          "specialist-nv"
+        ],
+        "note": "酒商掲載のNV仕様（製造ロット未記載）。"
+      },
+      "aging": {
+        "label": "熟成期間",
+        "value": "9ヶ月",
+        "sourceIds": [
+          "specialist-nv"
+        ],
+        "note": "酒商掲載のNV仕様（製造ロット未記載）。"
+      },
+      "sweetness": null
+    },
+    "specificationSources": [
+      {
+        "id": "dragee",
+        "title": "Dragee — ヴィーニャ・アデライダ Brut Nature NV（W-SK18070901）",
+        "url": "https://www.dragee.co.jp/fs/dragee/W-SK18070901",
+        "checkedAt": "2026-10-11",
+        "versionNote": "指定の商品番号とNVの本文を照合。銘柄・生産者・品種・国・DO・風味を参照しています。"
+      },
+      {
+        "id": "specialist-nv",
+        "title": "紀伊国屋リカーズ — Brut Nature NV（1014000068）",
+        "url": "https://store.shopping.yahoo.co.jp/tochikame/1014000068.html",
+        "checkedAt": "2026-10-11",
+        "versionNote": "同名NV・同生産者の商品本文。750ml・11.5%・90%/10%・9ヶ月・シャンパーニュ製法の販売仕様。製造ロットは未記載で、写真のロットとの一致は未確認です。別商品のBrut（1014000051）は参照していません。"
+      },
+      {
+        "id": "producer-history",
+        "title": "Bodegas López Morenas公式 — Quiénes somos",
+        "url": "https://bodegaslopezmorenas.com/quienes-somos/",
+        "checkedAt": "2026-10-11",
+        "versionNote": "生産者の1943年からの沿革。ワイン固有の発売年・ブドウ産地・製造ロットを示す資料ではありません。"
+      }
+    ],
+    "specificationGaps": {
+      "sweetness": "指定頁に明示の甘辛分類なし。Brut Natureの定義から実測糖分を推定しない。",
+      "productionLot": "資料の製造ロット未記載。写真の度数・容量・批号の全細部と独立照合したものではない。",
+      "residualSugar": "残糖・ドザージュの具体値は未確認。"
+    },
+    "name": "カヴァ ヴィーニャ・アデライダ ブリュット・ナチュレ NV",
+    "url": "https://www.dragee.co.jp/fs/dragee/W-SK18070901",
+    "category": "ワイン",
+    "categorySource": "Dragee W-SK18070901の商品本文「泡白ワイン」。ユーザーの指示で記録を指定URLのNV商品に合わせた。",
+    "notes": null,
+    "description": {
+      "text": "スペインのボデガス・ロペス・モレナスによる白のカヴァ。マカベオとパレリャーダを用いた、年号を限定しないブリュット・ナチュレです。販売店は、きめ細かな泡と果実の香り、爽やかな酸をこのNV商品の特徴として紹介しています。",
+      "sourceIds": [
+        "dragee"
+      ],
+      "note": "管理者の指定により、記録を商品資料のNV製品に合わせています。掲載画像の製造ロットの全仕様を確認したものではありません。"
+    },
+    "tastingNotes": [
+      {
+        "text": "青リンゴやオレンジを思わせる果実香に、トーストのような香ばしさが重なるとの説明です。フレッシュな酸とほのかな果実の甘みがあり、後味にはキレがあるとされています。",
+        "sourceIds": [
+          "dragee"
+        ],
+        "attribution": "販売店Drageeによる説明"
+      }
+    ],
+    "background": [
+      {
+        "text": "ボデガス・ロペス・モレナスは、1943年にスペインのエストレマドゥーラ地方、フエンテ・デル・マエストレで歩みを始めた生産者です。",
+        "sourceIds": [
+          "producer-history"
+        ],
+        "scope": "brand",
+        "note": "生産者の沿革です。本商品のブドウ収穫地や製造ロットを示す情報ではありません。"
+      }
+    ]
+  },
+  "expectedName": "カヴァ ヴィーニャ・アデライダ ブリュット・ナチュレ NV",
+  "expectedURL": "https://www.dragee.co.jp/fs/dragee/W-SK18070901"
+}

@@ -1,0 +1,48 @@
+{
+  "scope": "local",
+  "browser": "Chrome / Playwright",
+  "checkedAt": "2026-10-11T05:21:29.227Z",
+  "results": [
+    {
+      "width": 375,
+      "brandHover": {
+        "color": "rgb(48, 47, 44)",
+        "hover": "rgb(55, 49, 47)"
+      },
+      "brandFocus": true,
+      "aboutFocus": true,
+      "selectFocus": true
+    },
+    {
+      "width": 390,
+      "brandHover": {
+        "color": "rgb(48, 47, 44)",
+        "hover": "rgb(55, 49, 47)"
+      },
+      "brandFocus": true,
+      "aboutFocus": true,
+      "selectFocus": true
+    },
+    {
+      "width": 768,
+      "brandHover": {
+        "color": "rgb(48, 47, 44)",
+        "hover": "rgb(55, 49, 47)"
+      },
+      "brandFocus": true,
+      "aboutFocus": true,
+      "selectFocus": true
+    },
+    {
+      "width": 1440,
+      "brandHover": {
+        "color": "rgb(48, 47, 44)",
+        "hover": "rgb(55, 49, 47)"
+      },
+      "brandFocus": true,
+      "aboutFocus": true,
+      "selectFocus": true
+    }
+  ],
+  "nativeKeyboardMenu": "Arrow-key commit could not be verified in macOS automation; reproduced with unstyled standalone select and headed Chrome. Tab focus verified. Windows/Safari/real mobile not tested."
+}

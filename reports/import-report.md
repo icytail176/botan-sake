@@ -11,7 +11,6 @@
 - **info / source-not-provided**：v01-001
 - **info / source-not-provided**：v01-002
 - **info / source-not-provided**：v01-003
-- **warning / category-not-provided**：v01-004
 - **info / source-not-provided**：v01-004
 - **info / source-not-provided**：v01-005
 - **info / source-not-provided**：v01-006

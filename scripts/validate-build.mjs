@@ -47,6 +47,9 @@ for(const file of pages){
     const text=html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1].replace(/<[^>]+>/g,' ') ?? '';
     assert(!/\bv\d{2}-\d{3}\b|\b00[1-9]\b|\b010\b|資料番号|話数|ページは未登録|第\d+話|出典/.test(text),`Hidden detail metadata leaked ${file}`);
     assert(html.includes('登場巻：'),`Volume missing ${file}`);
+    const proseModules={description:product.description?[product.description]:[],tastingNotes:product.tastingNotes,background:product.background};
+    for(const [field,entries]of Object.entries(proseModules))assert.equal(html.includes(`data-module="${field}"`),entries.length>0,`Empty or missing prose module ${field}/${file}`);
+    assert.equal((html.match(/data-sourced-text/g)??[]).length,Object.values(proseModules).flat().length,`Prose count ${file}`);
     const specs=Object.entries(product.specifications).filter(([,s])=>s!==null);
     assert.equal((html.match(/data-specification=/g) ?? []).length,specs.length,`Incorrect specification row count ${file}`);
     assert.equal(html.includes('id="specifications-title"'),specs.length>0,`Empty basic info section ${file}`);
@@ -73,5 +76,5 @@ for(const file of (await walk('dist')).filter(f=>/\.(html|css|js|xml)$/.test(f))
 const originals=JSON.parse(await readFile('reports/original-checksums.json','utf8'));
 for(const [file,hash] of Object.entries(originals)){const bytes=await readFile(path.join(root,file));assert.equal(createHash('sha256').update(bytes).digest('hex'),hash,`Original changed: ${file}`);}
 assert.equal(failures.length,0,failures.join('\n'));
-const result={pages:pages.length,products:catalog.products.length,appearances:catalog.appearances.length,confirmed:catalog.appearances.filter(a=>a.status==='confirmed').length,checkedLinks,imageReferences:imageCount,checkedAssetCopies,canonicalPages:pages.length,sitemapURLs:locations.length,unchangedOriginals:Object.keys(originals).length,specificationRows:catalog.products.reduce((n,p)=>n+Object.values(p.specifications).filter(Boolean).length,0),productsWithSpecifications:catalog.products.filter(p=>Object.values(p.specifications).some(Boolean)).length,hiddenDetailMetadata:true,base,failures};
+const result={pages:pages.length,products:catalog.products.length,appearances:catalog.appearances.length,confirmed:catalog.appearances.filter(a=>a.status==='confirmed').length,checkedLinks,imageReferences:imageCount,checkedAssetCopies,canonicalPages:pages.length,sitemapURLs:locations.length,unchangedOriginals:Object.keys(originals).length,specificationRows:catalog.products.reduce((n,p)=>n+Object.values(p.specifications).filter(Boolean).length,0),productsWithSpecifications:catalog.products.filter(p=>Object.values(p.specifications).some(Boolean)).length,descriptions:catalog.products.filter(p=>p.description).length,tastingNotes:catalog.products.reduce((n,p)=>n+p.tastingNotes.length,0),backgrounds:catalog.products.reduce((n,p)=>n+p.background.length,0),hiddenDetailMetadata:true,base,failures};
 await writeFile('reports/build-validation.json',JSON.stringify(result,null,2)+'\n');console.log('Build validation:',result);

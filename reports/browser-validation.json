@@ -2,7 +2,7 @@
   "browser": "Chrome / Playwright",
   "scope": "local",
   "baseURL": "http://127.0.0.1:4321/botan-sake/",
-  "checkedAt": "2026-10-11T04:21:23.271Z",
+  "checkedAt": "2026-10-11T05:40:05.738Z",
   "darkEnvironment": true,
   "results": [
     {
@@ -42,6 +42,22 @@
       "sitemap": true,
       "aboutFeedback": true,
       "custom404": true,
+      "sourcedProse": true,
+      "noEmptyReadingModules": true,
+      "simplifiedHeader": true,
+      "brandReturnsHome": true,
+      "keyboardFocus": true,
+      "keyboardSelect": "native popup commit not verified: macOS automation limitation",
+      "selectStyles": [
+        {
+          "appearance": "none",
+          "position": "calc(100% - 18px) 50%",
+          "size": "12px 8px",
+          "padding": 48,
+          "width": 140,
+          "right": 357
+        }
+      ],
       "errors": [],
       "failed": []
     },
@@ -82,6 +98,22 @@
       "sitemap": true,
       "aboutFeedback": true,
       "custom404": true,
+      "sourcedProse": true,
+      "noEmptyReadingModules": true,
+      "simplifiedHeader": true,
+      "brandReturnsHome": true,
+      "keyboardFocus": true,
+      "keyboardSelect": "native popup commit not verified: macOS automation limitation",
+      "selectStyles": [
+        {
+          "appearance": "none",
+          "position": "calc(100% - 18px) 50%",
+          "size": "12px 8px",
+          "padding": 48,
+          "width": 140,
+          "right": 372
+        }
+      ],
       "errors": [],
       "failed": []
     },
@@ -122,6 +154,22 @@
       "sitemap": true,
       "aboutFeedback": true,
       "custom404": true,
+      "sourcedProse": true,
+      "noEmptyReadingModules": true,
+      "simplifiedHeader": true,
+      "brandReturnsHome": true,
+      "keyboardFocus": true,
+      "keyboardSelect": "native popup commit not verified: macOS automation limitation",
+      "selectStyles": [
+        {
+          "appearance": "none",
+          "position": "calc(100% - 18px) 50%",
+          "size": "12px 8px",
+          "padding": 48,
+          "width": 170,
+          "right": 736
+        }
+      ],
       "errors": [],
       "failed": []
     },
@@ -162,6 +210,22 @@
       "sitemap": true,
       "aboutFeedback": true,
       "custom404": true,
+      "sourcedProse": true,
+      "noEmptyReadingModules": true,
+      "simplifiedHeader": true,
+      "brandReturnsHome": true,
+      "keyboardFocus": true,
+      "keyboardSelect": "native popup commit not verified: macOS automation limitation",
+      "selectStyles": [
+        {
+          "appearance": "none",
+          "position": "calc(100% - 18px) 50%",
+          "size": "12px 8px",
+          "padding": 48,
+          "width": 170,
+          "right": 1312
+        }
+      ],
       "errors": [],
       "failed": []
     }
