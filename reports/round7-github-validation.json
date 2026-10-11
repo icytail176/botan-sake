@@ -1,0 +1,96 @@
+{
+  "checkedAt": "2026-10-11T06:20:59.241Z",
+  "scope": "actual GitHub repository homepage",
+  "url": "https://github.com/icytail176/botan-sake",
+  "browser": "Chrome / Playwright, isolated unauthenticated contexts",
+  "results": [
+    {
+      "width": 1440,
+      "pageHTTPStatus": 200,
+      "languageOrder": "Chinese before Japanese",
+      "languageAnchors": true,
+      "japanesePreviewAnchor": true,
+      "allSevenImagesLoaded": true,
+      "threeLocalScreenshots": true,
+      "actualWorkflowBadge": true,
+      "documentLinks": [
+        {
+          "path": "docs/CONTENT_GUIDE.md",
+          "url": "https://github.com/icytail176/botan-sake/blob/main/docs/CONTENT_GUIDE.md",
+          "status": 200,
+          "check": "actual browser document navigation"
+        },
+        {
+          "path": "docs/RESEARCH_GUIDE.md",
+          "url": "https://github.com/icytail176/botan-sake/blob/main/docs/RESEARCH_GUIDE.md",
+          "status": 200,
+          "check": "actual browser document navigation"
+        },
+        {
+          "path": "docs/DEPLOYMENT.md",
+          "url": "https://github.com/icytail176/botan-sake/blob/main/docs/DEPLOYMENT.md",
+          "status": 200,
+          "check": "actual browser document navigation"
+        },
+        {
+          "path": ".agents/skills/update-sake-catalog/SKILL.md",
+          "url": "https://github.com/icytail176/botan-sake/blob/main/.agents/skills/update-sake-catalog/SKILL.md",
+          "status": 200,
+          "check": "actual browser document navigation"
+        },
+        {
+          "path": "AGENTS.md",
+          "url": "https://github.com/icytail176/botan-sake/blob/main/AGENTS.md",
+          "status": 200,
+          "check": "actual browser document navigation"
+        }
+      ],
+      "detailsToggle": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "pageHTTPStatus": 200,
+      "languageOrder": "Chinese before Japanese",
+      "languageAnchors": true,
+      "japanesePreviewAnchor": true,
+      "allSevenImagesLoaded": true,
+      "threeLocalScreenshots": true,
+      "actualWorkflowBadge": true,
+      "documentLinks": [
+        {
+          "path": "docs/CONTENT_GUIDE.md",
+          "url": "https://github.com/icytail176/botan-sake/blob/main/docs/CONTENT_GUIDE.md",
+          "status": 200,
+          "check": "same target verified during desktop navigation"
+        },
+        {
+          "path": "docs/RESEARCH_GUIDE.md",
+          "url": "https://github.com/icytail176/botan-sake/blob/main/docs/RESEARCH_GUIDE.md",
+          "status": 200,
+          "check": "same target verified during desktop navigation"
+        },
+        {
+          "path": "docs/DEPLOYMENT.md",
+          "url": "https://github.com/icytail176/botan-sake/blob/main/docs/DEPLOYMENT.md",
+          "status": 200,
+          "check": "same target verified during desktop navigation"
+        },
+        {
+          "path": ".agents/skills/update-sake-catalog/SKILL.md",
+          "url": "https://github.com/icytail176/botan-sake/blob/main/.agents/skills/update-sake-catalog/SKILL.md",
+          "status": 200,
+          "check": "same target verified during desktop navigation"
+        },
+        {
+          "path": "AGENTS.md",
+          "url": "https://github.com/icytail176/botan-sake/blob/main/AGENTS.md",
+          "status": 200,
+          "check": "same target verified during desktop navigation"
+        }
+      ],
+      "detailsToggle": true,
+      "noHorizontalOverflow": true
+    }
+  ]
+}

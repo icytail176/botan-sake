@@ -18,4 +18,14 @@ npm run verify通过18项测试、导入0警告、Astro0错误/警告，13页面
 
 ## 发布状态
 
-本地验收完成，准备正常commit/push。本节将在实际推送、Actions和GitHub仓库首页浏览器验收后更新。不会以本地验证代替GitHub实际展示或正式网站验收。旧icytail176/image-host未操作。
+第六轮维护体系与第七轮README已一并提交、正常推送到main：`c708be3aaac598e4eb4857b8a8216056ea099a18`。没有force push，未操作旧icytail176/image-host。
+
+[GitHub Actions 38117562282](https://github.com/icytail176/botan-sake/actions/runs/38117562282)已完成，build与deploy均success，headSha与上述提交一致。发布记录见[release-round7-2026-10-11.json](release-round7-2026-10-11.json)。
+
+[实际GitHub仓库首页](https://github.com/icytail176/botan-sake)已用Chrome/Playwright在1440px和390px验收：标题与真实passing徽章正常，中日语言跳转、日文预览跳转、折叠预览、三张截图及五份文档入口均正常，无横向溢出。[检查记录](round7-github-validation.json)保存实际HTTP结果；标题区和预览均已目视检查。连续请求一度触发GitHub 429，降低访问频率并以正常浏览器页面导航重试后，全部文档返回200；没有将限流结果判为通过。
+
+[正式网站](https://icytail176.github.io/botan-sake/)线上13个HTML和33个静态资源全部200、哈希与本地构建一致，含30张图片、CSS、favicon及sitemap，脚本内联于已核对HTML；无旧图床依赖。见[线上资源验证](round7-site-validation.json)。
+
+[线上浏览器验证](round7-website-browser.json)：390px下首页、10款详情的名称/商品链接/图片、NV第4款、搜索、酒类与卷数筛选、Lightbox与Escape关闭、标题返回、关于页、真实404均通过，无横向溢出或脚本错误。没有将本地结果替代线上结果。本轮未改页面设计，未重复不同系统/浏览器的兼容性验收；实际环境为Chrome。
+
+本次验收与发布记录另作正常提交，随main推送；其工作流结果在最终交付时核对。README、原始资料、人工数据、网站产物与第六轮维护体系保持上述已验收状态。无需用户手工配置权限或再次确认发布。

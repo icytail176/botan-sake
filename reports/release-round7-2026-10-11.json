@@ -1,0 +1,62 @@
+{
+  "round": 7,
+  "recordedAt": "2026-10-11",
+  "repository": "https://github.com/icytail176/botan-sake",
+  "website": "https://icytail176.github.io/botan-sake/",
+  "contentCommit": "c708be3aaac598e4eb4857b8a8216056ea099a18",
+  "workflow": {
+    "url": "https://github.com/icytail176/botan-sake/actions/runs/38117562282",
+    "status": "completed",
+    "conclusion": "success",
+    "headSha": "c708be3aaac598e4eb4857b8a8216056ea099a18",
+    "jobs": [
+      {
+        "name": "build",
+        "conclusion": "success",
+        "url": "https://github.com/icytail176/botan-sake/actions/runs/38117562282/job/114405407076"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "success",
+        "url": "https://github.com/icytail176/botan-sake/actions/runs/38117562282/job/114405491060"
+      }
+    ]
+  },
+  "localVerification": {
+    "command": "npm run verify",
+    "tests": 18,
+    "passed": true,
+    "preservedFiles": 121,
+    "unchangedBuildFiles": 46,
+    "products": 10,
+    "confirmed": 10,
+    "specifications": 54,
+    "descriptions": 10,
+    "tastingNotes": 9,
+    "backgrounds": 6
+  },
+  "screenshots": {
+    "count": 3,
+    "totalBytes": 223656,
+    "manifest": "round7-screenshots.json"
+  },
+  "liveValidation": {
+    "githubReadme": "round7-github-validation.json",
+    "githubWidths": [
+      1440,
+      390
+    ],
+    "websiteAssets": "round7-site-validation.json",
+    "websiteBrowser": "round7-website-browser.json",
+    "websiteBrowserWidth": 390,
+    "allPassed": true
+  },
+  "maintenanceSystem": "Round6 AGENTS, Skill, docs, reports and tests retained and published",
+  "limitations": [
+    "Actual visual/browser checks used Chrome; no additional cross-browser or operating-system certification."
+  ],
+  "networkIncident": "GitHub returned 429 during rapid document requests; all five document pages subsequently returned 200 using paced browser navigation.",
+  "oldImageHostModified": false,
+  "forcePushUsed": false,
+  "humanActionRequired": false
+}
