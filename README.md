@@ -1,6 +1,6 @@
 # ぼたんの酒手帖
 
-《上伊那ぼたん、酔へる姿は百合の花》的非官方日文酒款图鉴。Astro + TypeScript + 原生 CSS，完全静态生成，预设 GitHub Pages 地址为 https://icytail176.github.io/botan-sake/ 。第四轮已完成本地发布准备并初始化 main 仓库；首次公开发布等待用户确认，尚未创建远程仓库、推送或部署。旧 image-host 未改动。
+《上伊那ぼたん、酔へる姿は百合の花》的非官方日文酒款图鉴。Astro + TypeScript + 原生 CSS，完全静态生成，预设 GitHub Pages 地址为 https://icytail176.github.io/botan-sake/ 。2026-10-11 已获用户明确确认并完成首次公开发布；正式网站 https://icytail176.github.io/botan-sake/ ，源码仓库 https://github.com/icytail176/botan-sake 。旧 image-host 未改动。
 
 ## 日常更新（首次发布完成后）
 
@@ -10,7 +10,7 @@
 4. `git add .` → `git diff --cached --stat` → `git commit -m "Update sake archive"` → `git push origin main`。
 5. GitHub Actions 自动构建、发布。首次部署或关键改动后运行 `npm run test:online` 验收实际线上网站。
 
-当前完整发布检查与待确认素材范围见 [发布准备记录](reports/release-preflight.md)。
+首次发布已通过实际线上验收，见 [交付报告](reports/DELIVERY.md)；推送前文件与素材审查保留于 [发布准备记录](reports/release-preflight.md)。
 
 ## 本地使用
 
@@ -261,13 +261,13 @@ npm run test:browser
 
 参考 [Astro 官方 Pages 文档](https://docs.astro.build/en/guides/deploy/github/)。配置为 `site: https://icytail176.github.io`、`base: /botan-sake`。工作流复用 checkout@v7、withastro/action@v6、deploy-pages@v5，Node 24；由 package-lock.json 自动识别 npm，按锁文件安装，并执行 npm run verify。build 失败会阻止 deploy；main 推送和 workflow_dispatch 均可触发。
 
-**当前停在首次公开发布确认阶段。** Git 本地 main 已初始化、提交身份使用 GitHub noreply，尚无提交或远程。GitHub 登录账户 icytail176 可用；2026-10-11 只读查询目标仓库返回 404。不得重复初始化、force push、覆盖其他仓库或操作旧 image-host。
+**首次发布完成（2026-10-11）。** 用户已明确确认公开范围。公开仓库 [icytail176/botan-sake](https://github.com/icytail176/botan-sake) 已创建，main 已提交并正常推送；Pages Source 为 GitHub Actions，HTTPS 已启用。[首次构建与部署](https://github.com/icytail176/botan-sake/actions/runs/38112645236) 均成功，线上四种屏宽与全部详情/交互已验收通过。没有需要用户手工完成的 GitHub 权限设置。
 
-首次公开前：阅读发布准备记录及待提交文件清单，确认是否允许公开 10 张商品图、10 张漫画截图、它们的网站副本与缩略图。确认识别不等于确认图片权利；非官方声明已保留，关于页计划使用新仓库的 GitHub Issues 接收纠错/删除请求。未填写或公开私人邮箱。Issues 内容公开，入口在目标仓库创建后生效。
+本地 main 已跟踪 origin/main，提交身份使用 GitHub noreply。不要重复 git init、创建同名仓库或 remote add，也不要 force push。关于页保留非官方/图片权利声明；公开反馈入口 [GitHub Issues](https://github.com/icytail176/botan-sake/issues) 已启用，contactEmail 仍为 null。发布前素材范围和99个文件的审查记录保留用于追溯。
 
-获得明确确认后，再创建或连接 **icytail176/botan-sake**（公开、不要额外初始化 README），提交当前文件到 main 并正常推送；在仓库 Settings → Pages → Build and deployment → Source 选择 **GitHub Actions**。随后等待 deploy 工作流成功；必要时在 Actions → Deploy to GitHub Pages → Run workflow 手动触发。实际成功后才将交付记录改为已发布。
+本次 Git 推送遇到默认解析地址连接异常，使用经公共 DNS 核实的可连接地址作为单次命令参数后成功；未修改系统 DNS、全局 Git 配置或保存固定 IP。以后若普通 git push 超时，应先检查网络/DNS，而不是永久固定此次地址。仓库认证、Pages 和 Actions 权限已经配置完成。
 
-正式地址预期为 https://icytail176.github.io/botan-sake/ 。部署后执行：
+正式地址为 https://icytail176.github.io/botan-sake/ 。部署完成后可执行：
 
 ```sh
 npm run test:online

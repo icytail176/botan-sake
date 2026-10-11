@@ -1,0 +1,48 @@
+{
+  "releaseDate": "2026-10-11",
+  "repository": "https://github.com/icytail176/botan-sake",
+  "website": "https://icytail176.github.io/botan-sake/",
+  "visibility": "public",
+  "branch": "main",
+  "initialCommit": "f60fe619a7f5a6f4dbebbf5b2e05908a22e44644",
+  "pagesBuildType": "workflow",
+  "httpsEnforced": true,
+  "firstDeployment": {
+    "runId": 38112645236,
+    "url": "https://github.com/icytail176/botan-sake/actions/runs/38112645236",
+    "event": "push",
+    "conclusion": "success",
+    "createdAt": "2026-10-11T04:46:27Z",
+    "updatedAt": "2026-10-11T04:47:05Z",
+    "jobs": [
+      {
+        "name": "build",
+        "conclusion": "success"
+      },
+      {
+        "name": "deploy",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "onlineAcceptance": {
+    "checkedAt": "2026-10-11T04:49:12.033Z",
+    "scope": "online",
+    "widths": [
+      375,
+      390,
+      768,
+      1440
+    ],
+    "detailRoutesPerWidth": 10,
+    "runtimeErrors": 0,
+    "unexpectedFailedRequests": 0,
+    "assetsHTTP200": 33,
+    "imageAssets": 30,
+    "allAssetHashesMatchLocalBuild": true,
+    "product4URL": "https://www.dragee.co.jp/fs/dragee/W-SK18070901",
+    "oldHostDependency": false
+  },
+  "manualGitHubPermissionStepsRequired": false,
+  "oldImageHostModified": false
+}
