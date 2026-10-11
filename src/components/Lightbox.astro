@@ -1,0 +1,23 @@
+<dialog id="image-dialog" aria-labelledby="image-dialog-title"><div class="lightbox-toolbar"><p id="image-dialog-title">画像プレビュー</p><button type="button" id="lightbox-size" aria-pressed="false">原寸で見る</button><button type="button" id="lightbox-close" aria-label="画像プレビューを閉じる">閉じる <span aria-hidden="true">×</span></button></div><div class="lightbox-scroll"><img id="lightbox-image" alt="" /></div><p class="lightbox-help">スクロールして画像全体をご覧いただけます。</p></dialog>
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('#image-dialog')!;
+  const img = document.querySelector<HTMLImageElement>('#lightbox-image')!;
+  const size = document.querySelector<HTMLButtonElement>('#lightbox-size')!;
+  let trigger: HTMLAnchorElement | null = null;
+  for (const link of document.querySelectorAll<HTMLAnchorElement>('[data-lightbox]')) {
+    link.addEventListener('click', e => { if(e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return; e.preventDefault(); trigger=link; img.src=link.href; img.alt=link.dataset.caption ?? link.querySelector('img')?.alt ?? '画像'; document.querySelector('#image-dialog-title')!.textContent = img.alt; img.classList.remove('native-size'); size.setAttribute('aria-pressed','false'); size.textContent='原寸で見る'; dialog.showModal(); document.body.classList.add('dialog-open'); dialog.querySelector('.lightbox-scroll')!.scrollTo(0,0); dialog.querySelector<HTMLButtonElement>('#lightbox-close')!.focus(); });
+  }
+  document.querySelector('#lightbox-close')!.addEventListener('click',()=>dialog.close());
+  size.addEventListener('click',()=>{ const native=img.classList.toggle('native-size'); size.setAttribute('aria-pressed',String(native)); size.textContent=native ? '画面に合わせる' : '原寸で見る'; });
+  dialog.addEventListener('keydown', e=>{
+    if(e.key !== 'Tab') return;
+    const buttons = [...dialog.querySelectorAll<HTMLButtonElement>('button:not([disabled])')];
+    const first = buttons[0], last = buttons[buttons.length - 1];
+    if(!first || !last) return;
+    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    else if(!dialog.contains(document.activeElement)){ e.preventDefault(); first.focus(); }
+  });
+  dialog.addEventListener('click', e=>{if(e.target===dialog){const box=dialog.getBoundingClientRect();if(e.clientX<box.left||e.clientX>box.right||e.clientY<box.top||e.clientY>box.bottom)dialog.close();}});
+  dialog.addEventListener('close',()=>{document.body.classList.remove('dialog-open'); img.removeAttribute('src'); trigger?.focus();});
+</script>

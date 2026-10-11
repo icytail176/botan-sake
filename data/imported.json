@@ -1,0 +1,402 @@
+{
+  "schemaVersion": 1,
+  "volumes": [
+    {
+      "number": 1,
+      "directory": "第1巻",
+      "label": "第1巻"
+    }
+  ],
+  "records": [
+    {
+      "id": "v01-001",
+      "volume": 1,
+      "number": 1,
+      "name": "秩父ワイン 源作印 巨峰 ロゼ",
+      "url": "https://chichibuwine.co.jp/product/%E6%BA%90%E4%BD%9C%E5%8D%B0%E3%80%80%E5%B7%A8%E5%B3%B0%E3%80%80720ml/",
+      "category": null,
+      "status": "unreviewed",
+      "source": null,
+      "notes": null,
+      "textSources": [
+        "第1巻/info.txt"
+      ],
+      "images": [
+        {
+          "path": "images/originals/3a2767eaea694026f7f9f54be655ffb29aa74162515f91b983b8781c77bb5cd1.webp",
+          "source": "第1巻/products/1.webp",
+          "width": 1440,
+          "height": 1920,
+          "hash": "3a2767eaea694026f7f9f54be655ffb29aa74162515f91b983b8781c77bb5cd1"
+        }
+      ],
+      "thumbnail": {
+        "path": "images/thumbs/3a2767eaea694026f7f9f54be655ffb29aa74162515f91b983b8781c77bb5cd1-800-v1.webp",
+        "source": "第1巻/products/1.webp",
+        "width": 800,
+        "height": 800,
+        "hash": "3a2767eaea694026f7f9f54be655ffb29aa74162515f91b983b8781c77bb5cd1"
+      },
+      "scenes": [
+        {
+          "path": "images/originals/b290fc8d9782858af4c942e95063cecb2678bcb46bb8d57361393f3e8a029a88.png",
+          "source": "第1巻/scenes/1.png",
+          "width": 420,
+          "height": 904,
+          "hash": "b290fc8d9782858af4c942e95063cecb2678bcb46bb8d57361393f3e8a029a88"
+        }
+      ]
+    },
+    {
+      "id": "v01-002",
+      "volume": 1,
+      "number": 2,
+      "name": "秩父麦酒 ペールエール 華熊",
+      "url": "https://chichibubeer.shop-pro.jp/?pid=151056744",
+      "category": null,
+      "status": "unreviewed",
+      "source": null,
+      "notes": null,
+      "textSources": [
+        "第1巻/info.txt"
+      ],
+      "images": [
+        {
+          "path": "images/originals/98ef620d7e80c633f5b417e84f6b025cb757e46a13a6ef05e2c442508e51eb67.jpg",
+          "source": "第1巻/products/2.jpeg",
+          "width": 600,
+          "height": 600,
+          "hash": "98ef620d7e80c633f5b417e84f6b025cb757e46a13a6ef05e2c442508e51eb67"
+        }
+      ],
+      "thumbnail": {
+        "path": "images/thumbs/98ef620d7e80c633f5b417e84f6b025cb757e46a13a6ef05e2c442508e51eb67-800-v1.webp",
+        "source": "第1巻/products/2.jpeg",
+        "width": 800,
+        "height": 800,
+        "hash": "98ef620d7e80c633f5b417e84f6b025cb757e46a13a6ef05e2c442508e51eb67"
+      },
+      "scenes": [
+        {
+          "path": "images/originals/1f7a34077aba1db999252d12ca588f9b35f93ee2bda049d10121ce1061208cff.png",
+          "source": "第1巻/scenes/2.png",
+          "width": 758,
+          "height": 610,
+          "hash": "1f7a34077aba1db999252d12ca588f9b35f93ee2bda049d10121ce1061208cff"
+        }
+      ]
+    },
+    {
+      "id": "v01-003",
+      "volume": 1,
+      "number": 3,
+      "name": "秩父錦 純米大吟醸",
+      "url": "https://chichibunishiki.com/meishu/#a03",
+      "category": null,
+      "status": "unreviewed",
+      "source": null,
+      "notes": null,
+      "textSources": [
+        "第1巻/info.txt"
+      ],
+      "images": [
+        {
+          "path": "images/originals/7d24814a0f2f677ed2ebe924e4685747e83c657a9998d29855aafe70f44f220a.png",
+          "source": "第1巻/products/3.png",
+          "width": 600,
+          "height": 600,
+          "hash": "7d24814a0f2f677ed2ebe924e4685747e83c657a9998d29855aafe70f44f220a"
+        }
+      ],
+      "thumbnail": {
+        "path": "images/thumbs/7d24814a0f2f677ed2ebe924e4685747e83c657a9998d29855aafe70f44f220a-800-v1.webp",
+        "source": "第1巻/products/3.png",
+        "width": 800,
+        "height": 800,
+        "hash": "7d24814a0f2f677ed2ebe924e4685747e83c657a9998d29855aafe70f44f220a"
+      },
+      "scenes": [
+        {
+          "path": "images/originals/ffac6d12672562742d9c1fefabc9208ac5078a4fecabde1809a84d1bbb73bfbe.png",
+          "source": "第1巻/scenes/3.png",
+          "width": 494,
+          "height": 674,
+          "hash": "ffac6d12672562742d9c1fefabc9208ac5078a4fecabde1809a84d1bbb73bfbe"
+        }
+      ]
+    },
+    {
+      "id": "v01-004",
+      "volume": 1,
+      "number": 4,
+      "name": "ヴィーニャ･アデライダ カバ ブリュット・ナチュール レセルバ",
+      "url": "https://www.dragee.co.jp/fs/dragee/W-SK18070901",
+      "category": null,
+      "status": "unreviewed",
+      "source": null,
+      "notes": null,
+      "textSources": [
+        "第1巻/info.txt"
+      ],
+      "images": [
+        {
+          "path": "images/originals/0422c2ac15549f2acff7d60b07d31352c9b5e461a6b6362e280d1f44e613b0c3.jpg",
+          "source": "第1巻/products/4.jpeg",
+          "width": 700,
+          "height": 700,
+          "hash": "0422c2ac15549f2acff7d60b07d31352c9b5e461a6b6362e280d1f44e613b0c3"
+        }
+      ],
+      "thumbnail": {
+        "path": "images/thumbs/0422c2ac15549f2acff7d60b07d31352c9b5e461a6b6362e280d1f44e613b0c3-800-v1.webp",
+        "source": "第1巻/products/4.jpeg",
+        "width": 800,
+        "height": 800,
+        "hash": "0422c2ac15549f2acff7d60b07d31352c9b5e461a6b6362e280d1f44e613b0c3"
+      },
+      "scenes": [
+        {
+          "path": "images/originals/20cde408ff89f869ba192ef5fcbc066d2b4af80e62747b56eb471755cec7e516.png",
+          "source": "第1巻/scenes/4.png",
+          "width": 518,
+          "height": 470,
+          "hash": "20cde408ff89f869ba192ef5fcbc066d2b4af80e62747b56eb471755cec7e516"
+        }
+      ]
+    },
+    {
+      "id": "v01-005",
+      "volume": 1,
+      "number": 5,
+      "name": "アサヒスーパードライ",
+      "url": "https://www.asahibeer.co.jp/superdry/",
+      "category": null,
+      "status": "unreviewed",
+      "source": null,
+      "notes": null,
+      "textSources": [
+        "第1巻/info.txt"
+      ],
+      "images": [
+        {
+          "path": "images/originals/6ce911f7c243c5586dd68b5d812291c8dffdac9ea43c8abd70162bc6bef96dd3.jpg",
+          "source": "第1巻/products/5.jpg",
+          "width": 1000,
+          "height": 1000,
+          "hash": "6ce911f7c243c5586dd68b5d812291c8dffdac9ea43c8abd70162bc6bef96dd3"
+        }
+      ],
+      "thumbnail": {
+        "path": "images/thumbs/6ce911f7c243c5586dd68b5d812291c8dffdac9ea43c8abd70162bc6bef96dd3-800-v1.webp",
+        "source": "第1巻/products/5.jpg",
+        "width": 800,
+        "height": 800,
+        "hash": "6ce911f7c243c5586dd68b5d812291c8dffdac9ea43c8abd70162bc6bef96dd3"
+      },
+      "scenes": [
+        {
+          "path": "images/originals/cb7dbdf9b5b6289a477fe75a75aeca5647aa8cb3f08f376e1bd69f9d50222eed.png",
+          "source": "第1巻/scenes/5.png",
+          "width": 610,
+          "height": 670,
+          "hash": "cb7dbdf9b5b6289a477fe75a75aeca5647aa8cb3f08f376e1bd69f9d50222eed"
+        }
+      ]
+    },
+    {
+      "id": "v01-006",
+      "volume": 1,
+      "number": 6,
+      "name": "百年の孤独",
+      "url": "https://www.kurokihonten.co.jp/shochu/",
+      "category": null,
+      "status": "unreviewed",
+      "source": null,
+      "notes": null,
+      "textSources": [
+        "第1巻/info.txt"
+      ],
+      "images": [
+        {
+          "path": "images/originals/c85c89651ee0743329026348503acd9ecb2b57f92bba3b1044788ee5333ddbb0.webp",
+          "source": "第1巻/products/6.webp",
+          "width": 1378,
+          "height": 1378,
+          "hash": "c85c89651ee0743329026348503acd9ecb2b57f92bba3b1044788ee5333ddbb0"
+        }
+      ],
+      "thumbnail": {
+        "path": "images/thumbs/c85c89651ee0743329026348503acd9ecb2b57f92bba3b1044788ee5333ddbb0-800-v1.webp",
+        "source": "第1巻/products/6.webp",
+        "width": 800,
+        "height": 800,
+        "hash": "c85c89651ee0743329026348503acd9ecb2b57f92bba3b1044788ee5333ddbb0"
+      },
+      "scenes": [
+        {
+          "path": "images/originals/1b1da130c8bf6a6a3191d0ff709941e3005a07af3e182012df97998fbf25af20.png",
+          "source": "第1巻/scenes/6.png",
+          "width": 644,
+          "height": 784,
+          "hash": "1b1da130c8bf6a6a3191d0ff709941e3005a07af3e182012df97998fbf25af20"
+        }
+      ]
+    },
+    {
+      "id": "v01-007",
+      "volume": 1,
+      "number": 7,
+      "name": "塩田酒造 芋焼酎 六代目百合",
+      "url": "https://www.honkakushochu.or.jp/product/1547/",
+      "category": null,
+      "status": "unreviewed",
+      "source": null,
+      "notes": null,
+      "textSources": [
+        "第1巻/info.txt"
+      ],
+      "images": [
+        {
+          "path": "images/originals/4cd8bfd4160acec94671abebc953f4607ad88d33a10e1858b67b8d7c037fd2c8.jpg",
+          "source": "第1巻/products/7.jpg",
+          "width": 350,
+          "height": 500,
+          "hash": "4cd8bfd4160acec94671abebc953f4607ad88d33a10e1858b67b8d7c037fd2c8"
+        }
+      ],
+      "thumbnail": {
+        "path": "images/thumbs/4cd8bfd4160acec94671abebc953f4607ad88d33a10e1858b67b8d7c037fd2c8-800-v1.webp",
+        "source": "第1巻/products/7.jpg",
+        "width": 800,
+        "height": 800,
+        "hash": "4cd8bfd4160acec94671abebc953f4607ad88d33a10e1858b67b8d7c037fd2c8"
+      },
+      "scenes": [
+        {
+          "path": "images/originals/49764a002f52cd3933cd26cce4de3d12679797d20f225faddfc45a55b3854016.png",
+          "source": "第1巻/scenes/7.png",
+          "width": 620,
+          "height": 1110,
+          "hash": "49764a002f52cd3933cd26cce4de3d12679797d20f225faddfc45a55b3854016"
+        }
+      ]
+    },
+    {
+      "id": "v01-008",
+      "volume": 1,
+      "number": 8,
+      "name": "喜久盛酒造 タクシードライバー 純米生原酒",
+      "url": "https://takahashi-sake.ocnk.net/product/4656",
+      "category": null,
+      "status": "unreviewed",
+      "source": null,
+      "notes": null,
+      "textSources": [
+        "第1巻/info.txt"
+      ],
+      "images": [
+        {
+          "path": "images/originals/b12ed8dda8e4f9f961cab2fb0f4d2f01cbc2e7bcd1ae2d47eef78d6470ef9553.jpg",
+          "source": "第1巻/products/8.jpg",
+          "width": 480,
+          "height": 640,
+          "hash": "b12ed8dda8e4f9f961cab2fb0f4d2f01cbc2e7bcd1ae2d47eef78d6470ef9553"
+        }
+      ],
+      "thumbnail": {
+        "path": "images/thumbs/b12ed8dda8e4f9f961cab2fb0f4d2f01cbc2e7bcd1ae2d47eef78d6470ef9553-800-v1.webp",
+        "source": "第1巻/products/8.jpg",
+        "width": 800,
+        "height": 800,
+        "hash": "b12ed8dda8e4f9f961cab2fb0f4d2f01cbc2e7bcd1ae2d47eef78d6470ef9553"
+      },
+      "scenes": [
+        {
+          "path": "images/originals/2e6a7e760f5d6072a1ce168ff759f25abc98bcc08327593a3bc3fc48f9060445.png",
+          "source": "第1巻/scenes/8.png",
+          "width": 356,
+          "height": 440,
+          "hash": "2e6a7e760f5d6072a1ce168ff759f25abc98bcc08327593a3bc3fc48f9060445"
+        }
+      ]
+    },
+    {
+      "id": "v01-009",
+      "volume": 1,
+      "number": 9,
+      "name": "Bovet La Valote Absinthe Émeraude 50cl",
+      "url": "https://www.absinthemarket.com/produit/emeraude-bovet-la-valote-50cl/?srsltid=AfmBOoo5mEfjigO03-1wWvvPJOSjpWMYaDoqgJ-q2Kr4mTdqhceouXqN",
+      "category": null,
+      "status": "unreviewed",
+      "source": null,
+      "notes": null,
+      "textSources": [
+        "第1巻/info.txt"
+      ],
+      "images": [
+        {
+          "path": "images/originals/1f526825e05f69ca423843be37ad90807518434e41a07fd6042350d4fd5d2913.jpg",
+          "source": "第1巻/products/9.jpg",
+          "width": 1000,
+          "height": 1000,
+          "hash": "1f526825e05f69ca423843be37ad90807518434e41a07fd6042350d4fd5d2913"
+        }
+      ],
+      "thumbnail": {
+        "path": "images/thumbs/1f526825e05f69ca423843be37ad90807518434e41a07fd6042350d4fd5d2913-800-v1.webp",
+        "source": "第1巻/products/9.jpg",
+        "width": 800,
+        "height": 800,
+        "hash": "1f526825e05f69ca423843be37ad90807518434e41a07fd6042350d4fd5d2913"
+      },
+      "scenes": [
+        {
+          "path": "images/originals/bf800eb513b13cbdba4318a631fc8696dbc0ea7e7c66a3b25837a36d1f8d3e3a.png",
+          "source": "第1巻/scenes/9.png",
+          "width": 650,
+          "height": 718,
+          "hash": "bf800eb513b13cbdba4318a631fc8696dbc0ea7e7c66a3b25837a36d1f8d3e3a"
+        }
+      ]
+    },
+    {
+      "id": "v01-010",
+      "volume": 1,
+      "number": 10,
+      "name": "ブリュードッグ パンクIPA",
+      "url": "https://www.brewdog.jp/lineup/",
+      "category": null,
+      "status": "unreviewed",
+      "source": null,
+      "notes": null,
+      "textSources": [
+        "第1巻/info.txt"
+      ],
+      "images": [
+        {
+          "path": "images/originals/26820ca6fa5a6fdbe1bf3f3af1c4834f89e67d61210751617d2205dac865756b.jpg",
+          "source": "第1巻/products/10.jpg",
+          "width": 1000,
+          "height": 1000,
+          "hash": "26820ca6fa5a6fdbe1bf3f3af1c4834f89e67d61210751617d2205dac865756b"
+        }
+      ],
+      "thumbnail": {
+        "path": "images/thumbs/26820ca6fa5a6fdbe1bf3f3af1c4834f89e67d61210751617d2205dac865756b-800-v1.webp",
+        "source": "第1巻/products/10.jpg",
+        "width": 800,
+        "height": 800,
+        "hash": "26820ca6fa5a6fdbe1bf3f3af1c4834f89e67d61210751617d2205dac865756b"
+      },
+      "scenes": [
+        {
+          "path": "images/originals/7441700081e82d0cd1c4a910e69d9eef37533e0c99d331cf2dfa8f9301d91352.png",
+          "source": "第1巻/scenes/10.png",
+          "width": 960,
+          "height": 742,
+          "hash": "7441700081e82d0cd1c4a910e69d9eef37533e0c99d331cf2dfa8f9301d91352"
+        }
+      ]
+    }
+  ]
+}

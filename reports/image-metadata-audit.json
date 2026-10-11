@@ -1,0 +1,352 @@
+{
+  "scope": "20 original images; EXIF and embedded XMP/IPTC text privacy indicators; metadata values not published",
+  "records": [
+    {
+      "file": "第1巻/products/8.jpg",
+      "exifTags": [],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/products/9.jpg",
+      "exifTags": [],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/products/10.jpg",
+      "exifTags": [],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/products/4.jpeg",
+      "exifTags": [],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/products/1.webp",
+      "exifTags": [],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/products/2.jpeg",
+      "exifTags": [],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/products/5.jpg",
+      "exifTags": [
+        "ResolutionUnit",
+        "XResolution",
+        "YResolution"
+      ],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/products/7.jpg",
+      "exifTags": [],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/products/3.png",
+      "exifTags": [],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/products/6.webp",
+      "exifTags": [
+        "ResolutionUnit",
+        "ExifOffset",
+        "Orientation",
+        "XResolution",
+        "YResolution",
+        "HostComputer",
+        "ExifVersion",
+        "ColorSpace",
+        "ExifImageWidth",
+        "ExifImageHeight"
+      ],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/scenes/8.png",
+      "exifTags": [
+        "ResolutionUnit",
+        "ExifOffset",
+        "XResolution",
+        "YResolution",
+        "ExifImageWidth",
+        "ExifImageHeight",
+        "UserComment"
+      ],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [
+        "UserComment"
+      ],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/scenes/9.png",
+      "exifTags": [
+        "ResolutionUnit",
+        "ExifOffset",
+        "XResolution",
+        "YResolution",
+        "ExifImageWidth",
+        "ExifImageHeight",
+        "UserComment"
+      ],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [
+        "UserComment"
+      ],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/scenes/10.png",
+      "exifTags": [
+        "ResolutionUnit",
+        "ExifOffset",
+        "XResolution",
+        "YResolution",
+        "ExifImageWidth",
+        "ExifImageHeight",
+        "UserComment"
+      ],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [
+        "UserComment"
+      ],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/scenes/4.png",
+      "exifTags": [
+        "ResolutionUnit",
+        "ExifOffset",
+        "XResolution",
+        "YResolution",
+        "ExifImageWidth",
+        "ExifImageHeight",
+        "UserComment"
+      ],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [
+        "UserComment"
+      ],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/scenes/5.png",
+      "exifTags": [
+        "ResolutionUnit",
+        "ExifOffset",
+        "XResolution",
+        "YResolution",
+        "ExifImageWidth",
+        "ExifImageHeight",
+        "UserComment"
+      ],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [
+        "UserComment"
+      ],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/scenes/7.png",
+      "exifTags": [
+        "ResolutionUnit",
+        "ExifOffset",
+        "XResolution",
+        "YResolution",
+        "ExifImageWidth",
+        "ExifImageHeight",
+        "UserComment"
+      ],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [
+        "UserComment"
+      ],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/scenes/6.png",
+      "exifTags": [
+        "ResolutionUnit",
+        "ExifOffset",
+        "XResolution",
+        "YResolution",
+        "ExifImageWidth",
+        "ExifImageHeight",
+        "UserComment"
+      ],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [
+        "UserComment"
+      ],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/scenes/2.png",
+      "exifTags": [
+        "ResolutionUnit",
+        "ExifOffset",
+        "XResolution",
+        "YResolution",
+        "ExifImageWidth",
+        "ExifImageHeight",
+        "UserComment"
+      ],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [
+        "UserComment"
+      ],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/scenes/3.png",
+      "exifTags": [
+        "ResolutionUnit",
+        "ExifOffset",
+        "XResolution",
+        "YResolution",
+        "ExifImageWidth",
+        "ExifImageHeight",
+        "UserComment"
+      ],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [
+        "UserComment"
+      ],
+      "credentialMarker": false
+    },
+    {
+      "file": "第1巻/scenes/1.png",
+      "exifTags": [
+        "ResolutionUnit",
+        "ExifOffset",
+        "XResolution",
+        "YResolution",
+        "ExifImageWidth",
+        "ExifImageHeight",
+        "UserComment"
+      ],
+      "gps": false,
+      "personalEmail": false,
+      "homePath": false,
+      "authorTags": [
+        "UserComment"
+      ],
+      "credentialMarker": false
+    }
+  ],
+  "screenshotComments": [
+    {
+      "file": "第1巻/scenes/8.png",
+      "commentIsScreenshotMarker": true,
+      "commentLength": 10
+    },
+    {
+      "file": "第1巻/scenes/9.png",
+      "commentIsScreenshotMarker": true,
+      "commentLength": 10
+    },
+    {
+      "file": "第1巻/scenes/10.png",
+      "commentIsScreenshotMarker": true,
+      "commentLength": 10
+    },
+    {
+      "file": "第1巻/scenes/4.png",
+      "commentIsScreenshotMarker": true,
+      "commentLength": 10
+    },
+    {
+      "file": "第1巻/scenes/5.png",
+      "commentIsScreenshotMarker": true,
+      "commentLength": 10
+    },
+    {
+      "file": "第1巻/scenes/7.png",
+      "commentIsScreenshotMarker": true,
+      "commentLength": 10
+    },
+    {
+      "file": "第1巻/scenes/6.png",
+      "commentIsScreenshotMarker": true,
+      "commentLength": 10
+    },
+    {
+      "file": "第1巻/scenes/2.png",
+      "commentIsScreenshotMarker": true,
+      "commentLength": 10
+    },
+    {
+      "file": "第1巻/scenes/3.png",
+      "commentIsScreenshotMarker": true,
+      "commentLength": 10
+    },
+    {
+      "file": "第1巻/scenes/1.png",
+      "commentIsScreenshotMarker": true,
+      "commentLength": 10
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "volumes": 1,
+  "products": 10,
+  "appearances": 10,
+  "productImages": 10,
+  "sceneImages": 10,
+  "uniqueOutputAssets": 30,
+  "inventory": [
+    {
+      "file": "第1巻/info.txt",
+      "kind": "text",
+      "bytes": 1098,
+      "sha256": "6d890857e5668b85b94d015fb57342955b7f70d289872fdc7ee10ded43ace1b5"
+    },
+    {
+      "file": "第1巻/products/1.webp",
+      "kind": "products",
+      "number": 1,
+      "variant": 0,
+      "bytes": 485124,
+      "sha256": "3a2767eaea694026f7f9f54be655ffb29aa74162515f91b983b8781c77bb5cd1"
+    },
+    {
+      "file": "第1巻/products/2.jpeg",
+      "kind": "products",
+      "number": 2,
+      "variant": 0,
+      "bytes": 29188,
+      "sha256": "98ef620d7e80c633f5b417e84f6b025cb757e46a13a6ef05e2c442508e51eb67"
+    },
+    {
+      "file": "第1巻/products/3.png",
+      "kind": "products",
+      "number": 3,
+      "variant": 0,
+      "bytes": 41354,
+      "sha256": "7d24814a0f2f677ed2ebe924e4685747e83c657a9998d29855aafe70f44f220a"
+    },
+    {
+      "file": "第1巻/products/4.jpeg",
+      "kind": "products",
+      "number": 4,
+      "variant": 0,
+      "bytes": 23091,
+      "sha256": "0422c2ac15549f2acff7d60b07d31352c9b5e461a6b6362e280d1f44e613b0c3"
+    },
+    {
+      "file": "第1巻/products/5.jpg",
+      "kind": "products",
+      "number": 5,
+      "variant": 0,
+      "bytes": 96258,
+      "sha256": "6ce911f7c243c5586dd68b5d812291c8dffdac9ea43c8abd70162bc6bef96dd3"
+    },
+    {
+      "file": "第1巻/products/6.webp",
+      "kind": "products",
+      "number": 6,
+      "variant": 0,
+      "bytes": 114396,
+      "sha256": "c85c89651ee0743329026348503acd9ecb2b57f92bba3b1044788ee5333ddbb0"
+    },
+    {
+      "file": "第1巻/products/7.jpg",
+      "kind": "products",
+      "number": 7,
+      "variant": 0,
+      "bytes": 28556,
+      "sha256": "4cd8bfd4160acec94671abebc953f4607ad88d33a10e1858b67b8d7c037fd2c8"
+    },
+    {
+      "file": "第1巻/products/8.jpg",
+      "kind": "products",
+      "number": 8,
+      "variant": 0,
+      "bytes": 31804,
+      "sha256": "b12ed8dda8e4f9f961cab2fb0f4d2f01cbc2e7bcd1ae2d47eef78d6470ef9553"
+    },
+    {
+      "file": "第1巻/products/9.jpg",
+      "kind": "products",
+      "number": 9,
+      "variant": 0,
+      "bytes": 13912,
+      "sha256": "1f526825e05f69ca423843be37ad90807518434e41a07fd6042350d4fd5d2913"
+    },
+    {
+      "file": "第1巻/products/10.jpg",
+      "kind": "products",
+      "number": 10,
+      "variant": 0,
+      "bytes": 49790,
+      "sha256": "26820ca6fa5a6fdbe1bf3f3af1c4834f89e67d61210751617d2205dac865756b"
+    },
+    {
+      "file": "第1巻/scenes/1.png",
+      "kind": "scenes",
+      "number": 1,
+      "variant": 0,
+      "bytes": 521125,
+      "sha256": "b290fc8d9782858af4c942e95063cecb2678bcb46bb8d57361393f3e8a029a88"
+    },
+    {
+      "file": "第1巻/scenes/2.png",
+      "kind": "scenes",
+      "number": 2,
+      "variant": 0,
+      "bytes": 679128,
+      "sha256": "1f7a34077aba1db999252d12ca588f9b35f93ee2bda049d10121ce1061208cff"
+    },
+    {
+      "file": "第1巻/scenes/3.png",
+      "kind": "scenes",
+      "number": 3,
+      "variant": 0,
+      "bytes": 517677,
+      "sha256": "ffac6d12672562742d9c1fefabc9208ac5078a4fecabde1809a84d1bbb73bfbe"
+    },
+    {
+      "file": "第1巻/scenes/4.png",
+      "kind": "scenes",
+      "number": 4,
+      "variant": 0,
+      "bytes": 410239,
+      "sha256": "20cde408ff89f869ba192ef5fcbc066d2b4af80e62747b56eb471755cec7e516"
+    },
+    {
+      "file": "第1巻/scenes/5.png",
+      "kind": "scenes",
+      "number": 5,
+      "variant": 0,
+      "bytes": 645981,
+      "sha256": "cb7dbdf9b5b6289a477fe75a75aeca5647aa8cb3f08f376e1bd69f9d50222eed"
+    },
+    {
+      "file": "第1巻/scenes/6.png",
+      "kind": "scenes",
+      "number": 6,
+      "variant": 0,
+      "bytes": 841398,
+      "sha256": "1b1da130c8bf6a6a3191d0ff709941e3005a07af3e182012df97998fbf25af20"
+    },
+    {
+      "file": "第1巻/scenes/7.png",
+      "kind": "scenes",
+      "number": 7,
+      "variant": 0,
+      "bytes": 1126268,
+      "sha256": "49764a002f52cd3933cd26cce4de3d12679797d20f225faddfc45a55b3854016"
+    },
+    {
+      "file": "第1巻/scenes/8.png",
+      "kind": "scenes",
+      "number": 8,
+      "variant": 0,
+      "bytes": 264134,
+      "sha256": "2e6a7e760f5d6072a1ce168ff759f25abc98bcc08327593a3bc3fc48f9060445"
+    },
+    {
+      "file": "第1巻/scenes/9.png",
+      "kind": "scenes",
+      "number": 9,
+      "variant": 0,
+      "bytes": 706332,
+      "sha256": "bf800eb513b13cbdba4318a631fc8696dbc0ea7e7c66a3b25837a36d1f8d3e3a"
+    },
+    {
+      "file": "第1巻/scenes/10.png",
+      "kind": "scenes",
+      "number": 10,
+      "variant": 0,
+      "bytes": 885017,
+      "sha256": "7441700081e82d0cd1c4a910e69d9eef37533e0c99d331cf2dfa8f9301d91352"
+    }
+  ],
+  "issues": [
+    {
+      "severity": "info",
+      "code": "source-not-provided",
+      "id": "v01-001"
+    },
+    {
+      "severity": "info",
+      "code": "source-not-provided",
+      "id": "v01-002"
+    },
+    {
+      "severity": "info",
+      "code": "source-not-provided",
+      "id": "v01-003"
+    },
+    {
+      "severity": "warning",
+      "code": "category-not-provided",
+      "id": "v01-004"
+    },
+    {
+      "severity": "info",
+      "code": "source-not-provided",
+      "id": "v01-004"
+    },
+    {
+      "severity": "info",
+      "code": "source-not-provided",
+      "id": "v01-005"
+    },
+    {
+      "severity": "info",
+      "code": "source-not-provided",
+      "id": "v01-006"
+    },
+    {
+      "severity": "info",
+      "code": "source-not-provided",
+      "id": "v01-007"
+    },
+    {
+      "severity": "info",
+      "code": "source-not-provided",
+      "id": "v01-008"
+    },
+    {
+      "severity": "info",
+      "code": "source-not-provided",
+      "id": "v01-009"
+    },
+    {
+      "severity": "info",
+      "code": "source-not-provided",
+      "id": "v01-010"
+    }
+  ]
+}

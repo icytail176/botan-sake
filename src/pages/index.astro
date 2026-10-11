@@ -1,0 +1,47 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Mark from '../components/Mark.astro';
+import SakeCard from '../components/SakeCard.astro';
+import { catalog, products, withBase } from '../lib/catalog';
+const categories = [...new Set(products.map(p=>p.category ?? '未分類'))];
+---
+<Layout>
+  <section class="intro wrap" aria-labelledby="intro-title">
+    <div class="intro-copy"><p class="eyebrow"><span></span> 物語と、お酒のあいだに。</p><h1 id="intro-title">あの一杯を、<br />この手帖に。</h1><p class="intro-description">『上伊那ぼたん、酔へる姿は百合の花』に登場する<br class="desktop-break" />お酒を集めた、小さな図鑑。<br />ページをめくるように、物語の一杯をたどって。</p><a class="intro-link" href="#catalog">酒図鑑をひらく <span aria-hidden="true">↓</span></a></div>
+    <div class="intro-aside" aria-hidden="true"><span class="notebook-line">A NOTEBOOK OF<br />DRINKS IN THE STORY</span><div class="editorial-flower"><Mark /></div><div class="intro-stats"><span><b>{String(products.length).padStart(2,'0')}</b>収録銘柄</span><span><b>{String(catalog.volumes.length).padStart(2,'0')}</b>収録巻数</span></div></div>
+  </section>
+  <section id="catalog" class="catalog wrap" aria-labelledby="catalog-title">
+    <div class="section-heading"><div><p class="eyebrow">THE SAKE ARCHIVE</p><h2 id="catalog-title">酒図鑑<span class="heading-count">{products.length} 銘柄</span></h2></div><p class="section-caption">物語で出会ったお酒の記録。</p></div>
+    <form class="filters" role="search" id="filter-form" autocomplete="off">
+      <div class="search-field"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 5 5"/></svg><label class="sr-only" for="search">お酒の名前で検索</label><input id="search" type="search" placeholder="お酒の名前で検索" /></div>
+      <div class="volume-field"><label for="volume">登場巻</label><select id="volume"><option value="all">すべての巻</option>{catalog.volumes.map(v=><option value={v.number}>{v.label}</option>)}</select></div>
+      <fieldset class="category-filters"><legend class="sr-only">酒類で絞り込み</legend><button type="button" data-filter="all" aria-pressed="true">すべて</button>{categories.map(c=><button type="button" data-filter={c} aria-pressed="false">{c}</button>)}</fieldset>
+    </form>
+    <div class="results-bar"><p id="result-count" role="status" aria-live="polite">全 {products.length} 銘柄を表示</p><p>登場巻・資料番号順 <span aria-hidden="true">↓</span></p></div>
+    <ul class="sake-grid">{products.map((product,index)=><SakeCard product={product} index={index} />)}</ul>
+    <div class="empty-state" id="empty-state" hidden><p>該当するお酒が見つかりませんでした。</p><span>名前や絞り込み条件を変えて、もう一度お試しください。</span><button type="button" id="reset-filters">絞り込みをリセット</button></div>
+    <noscript><p class="notice">すべてのお酒を表示しています。検索・絞り込みには JavaScript が必要です。</p></noscript>
+    <div class="archive-end"><span aria-hidden="true">✳</span><p>この手帖は、少しずつ増えていきます。</p><a href={withBase('about/')}>この手帖について <span aria-hidden="true">→</span></a></div>
+  </section>
+</Layout>
+<script>
+  const form = document.querySelector<HTMLFormElement>('#filter-form')!;
+  const search = document.querySelector<HTMLInputElement>('#search')!;
+  const volume = document.querySelector<HTMLSelectElement>('#volume')!;
+  const buttons = [...document.querySelectorAll<HTMLButtonElement>('[data-filter]')];
+  const cards = [...document.querySelectorAll<HTMLElement>('.sake-card')];
+  const normalize = (s: string) => s.normalize('NFKC').toLocaleLowerCase('ja').replace(/[\u30a1-\u30f6]/g, c=>String.fromCharCode(c.charCodeAt(0)-0x60)).replace(/\s+/g, '');
+  let category = 'all';
+  function apply(save = true) {
+    let count = 0;
+    for (const card of cards) { const matches = normalize(card.dataset.name!).includes(normalize(search.value)) && (category === 'all' || card.dataset.category === category) && (volume.value === 'all' || card.dataset.volumes!.split(',').includes(volume.value)); card.hidden = !matches; if(matches) count++; }
+    buttons.forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.filter === category)));
+    document.querySelector('#result-count')!.textContent = count === cards.length ? `全 ${count} 銘柄を表示` : `${cards.length} 銘柄中 ${count} 銘柄を表示`;
+    (document.querySelector('#empty-state') as HTMLElement).hidden = count !== 0;
+    if (save) { const url = new URL(location.href); url.search = ''; if(search.value) url.searchParams.set('q',search.value); if(category !== 'all') url.searchParams.set('category', category); if(volume.value !== 'all') url.searchParams.set('volume',volume.value); history.replaceState(null,'',url); }
+  }
+  function restore() { const params = new URLSearchParams(location.search); search.value = params.get('q') ?? ''; category = buttons.some(b=>b.dataset.filter===params.get('category')) ? params.get('category')! : 'all'; volume.value = [...volume.options].some(o=>o.value===params.get('volume')) ? params.get('volume')! : 'all'; apply(false); }
+  form.addEventListener('submit',e=>e.preventDefault()); search.addEventListener('input',()=>apply()); volume.addEventListener('change',()=>apply()); buttons.forEach(b=>b.addEventListener('click',()=>{category=b.dataset.filter!;apply();}));
+  document.querySelector('#reset-filters')!.addEventListener('click',()=>{search.value='';category='all';volume.value='all';apply();search.focus();});
+  window.addEventListener('pageshow',restore); window.addEventListener('popstate',restore); restore();
+</script>

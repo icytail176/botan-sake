@@ -1,0 +1,31 @@
+{
+  "name": "botan-sake",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "import": "node scripts/import.mjs",
+    "dev": "npm run import && ASTRO_TELEMETRY_DISABLED=1 astro dev --host 127.0.0.1",
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "test": "node --test tests/*.test.mjs",
+    "build": "npm run import && npm run check && ASTRO_TELEMETRY_DISABLED=1 astro build && node scripts/validate-build.mjs",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview --host 127.0.0.1",
+    "verify": "npm run test && npm run build",
+    "test:browser": "node tests/browser.mjs",
+    "clean:info": "node scripts/clean-info.mjs",
+    "test:online": "BOTAN_TEST_URL=https://icytail176.github.io/botan-sake/ node tests/browser.mjs"
+  },
+  "dependencies": {
+    "astro": "^6.0.0",
+    "sharp": "^0.34.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.0",
+    "typescript": "^5.9.0",
+    "@playwright/test": "^1.56.0"
+  }
+}

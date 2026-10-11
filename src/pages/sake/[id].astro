@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Lightbox from '../../components/Lightbox.astro';
+import { products, appearancesFor, specificationsFor, withBase, statusLabel, type Product } from '../../lib/catalog';
+export function getStaticPaths() { return products.map(product => ({ params: { id: product.id }, props: { product } })); }
+interface Props { product: Product }
+const { product } = Astro.props;
+const appearances = appearancesFor(product.id);
+const pending = appearances.filter(a => a.status !== 'confirmed');
+const mainImage = product.images[0];
+const specifications = specificationsFor(product);
+const sourceNumber = (id: string) => product.specificationSources.findIndex(source=>source.id===id)+1;
+const volumes = [...new Set(appearances.map(a=>a.volume))];
+const index = products.findIndex(p=>p.id===product.id), previous = products[index-1], next = products[index+1];
+---
+<Layout title={product.name} image={product.thumbnail?.path}>
+  <div class="detail wrap">
+    <nav class="breadcrumb" aria-label="パンくずリスト"><a href={withBase()}>ホーム</a><span aria-hidden="true">/</span><a href={withBase('#catalog')}>酒図鑑</a><span aria-hidden="true">/</span><span>お酒の手帖</span></nav>
+    <header class="detail-heading">
+      <p class="eyebrow">SAKE NOTE</p>
+      {product.category && <span class="detail-category">{product.category}</span>}
+      <h1 id="product-title">{product.name}</h1>
+    </header>
+    <section class:list={['product-detail', { 'no-specifications': specifications.length===0 }]} aria-labelledby="product-title">
+      <div class="detail-photo">
+        <div class="product-square">{mainImage ? <a href={withBase(mainImage.path)} data-lightbox data-caption={`${product.name} — 商品画像`} aria-label={`${product.name}の商品画像を拡大`}><img src={withBase(mainImage.path)} alt={product.name} width={mainImage.width} height={mainImage.height} fetchpriority="high" /><span class="photo-enlarge">画像を拡大 <span aria-hidden="true">↗</span></span></a> : <span class="image-missing">商品画像は準備中です</span>}</div>
+        {product.images.length>1 && <div class="extra-products">{product.images.slice(1).map(image=><a href={withBase(image.path)} data-lightbox data-caption={`${product.name} — 商品画像`} aria-label="追加の商品画像を拡大"><img src={withBase(image.path)} alt={`${product.name}の追加画像`} width={image.width} height={image.height} /></a>)}</div>}
+        <p class="photo-note">管理者が収集した商品画像です。</p>
+      </div>
+      <div class="detail-copy">
+        {specifications.length > 0 && <section class="product-specifications" aria-labelledby="specifications-title">
+          <h2 id="specifications-title">基本情報</h2>
+          <table class="specification-table"><caption class="sr-only">{product.name}の商品仕様</caption><tbody>
+            {specifications.map(([key,spec])=><tr data-specification={key}>
+              <th scope="row">{spec.label}</th>
+              <td><span class="specification-value">{spec.value}</span><span class="specification-citations">{spec.sourceIds.map(id=><a href={`#reference-${sourceNumber(id)}`} aria-label={`${spec.label}の資料 ${sourceNumber(id)}`}>[{sourceNumber(id)}]</a>)}</span>{spec.note && <small class="specification-note">{spec.note}</small>}</td>
+            </tr>)}
+          </tbody></table>
+        </section>}
+        <p class="appearance-volumes"><span>登場巻：</span>{volumes.map(v=>`第${v}巻`).join('、')}</p>
+        {pending.length>0 && <p class="product-notes">作品との照合：{[...new Set(pending.map(a=>statusLabel(a.status)))].join(' / ')}</p>}
+        {product.notes && <p class="product-notes">{product.notes}</p>}
+        {appearances.some(a=>a.status==='uncertain') && <p class="notice">この銘柄は同定が未確定です。作品の描写と商品資料を照合する必要があります。</p>}
+      </div>
+    </section>
+    <section class="appearances" aria-labelledby="appearance-title">
+      <div class="section-heading"><div><p class="eyebrow">IN THE STORY</p><h2 id="appearance-title">原作での登場シーン</h2></div><p class="section-caption">作品の描写をたどる、登場の記録。</p></div>
+      {appearances.map(a=><article class="appearance">
+        <div class="appearance-copy"><h3>第{a.volume}巻</h3>
+          {a.status !== 'confirmed' && <p class:list={{ 'uncertain-text':a.status==='uncertain' }}>{statusLabel(a.status)}</p>}
+          {a.notes && <p class="appearance-notes">{a.notes}</p>}
+          <p class="small-note">『上伊那ぼたん、酔へる姿は百合の花』<br />提供された作品画像を、照合資料として掲載しています。</p>
+        </div>
+        <div class="scene-gallery">{a.scenes.map((scene,i)=><figure><a href={withBase(scene.path)} data-lightbox data-caption={`第${a.volume}巻 — 作品画像 ${i+1}`} aria-label={`第${a.volume}巻の作品画像 ${i+1}を拡大`}><img src={withBase(scene.path)} alt={`第${a.volume}巻の作品画像 ${i+1}`} width={scene.width} height={scene.height} loading="lazy" /><span class="scene-enlarge">全体を拡大表示 <span aria-hidden="true">↗</span></span></a><figcaption>第{a.volume}巻 · 画像 {i+1}</figcaption></figure>)}</div>
+      </article>)}
+    </section>
+    {(product.url || product.specificationSources.length>0) && <section class="product-references" aria-labelledby="references-title">
+      <h2 id="references-title">商品資料・参考リンク</h2>
+      {product.url && <a class="external-link" href={product.url} target="_blank" rel="noopener noreferrer">元の商品資料を見る <span aria-hidden="true">↗</span><span class="sr-only">（外部サイト・新しいタブ）</span></a>}
+      {product.specificationSources.length>0 && <ol class="specification-sources">{product.specificationSources.map((source,i)=><li id={`reference-${i+1}`}>
+        <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title} <span aria-hidden="true">↗</span><span class="sr-only">（外部サイト・新しいタブ）</span></a>
+        <small>確認日：<time datetime={source.checkedAt}>{source.checkedAt}</time></small>
+        {source.versionNote && <p>{source.versionNote}</p>}
+      </li>)}</ol>}
+      <p class="detail-disclaimer">資料で確認できた商品情報を掲載しています。製造時期・仕込・販売地域によって仕様が異なる場合があります。</p>
+    </section>}
+    <nav class="detail-pagination" aria-label="図鑑の前後のページ"><div>{previous && <a href={withBase(`sake/${previous.id}/`)}><small>← 前のお酒</small><span>{previous.name}</span></a>}</div><a href={withBase('#catalog')} class="back-to-catalog">図鑑にもどる <span aria-hidden="true">↗</span></a><div>{next && <a href={withBase(`sake/${next.id}/`)}><small>次のお酒 →</small><span>{next.name}</span></a>}</div></nav>
+  </div><Lightbox />
+</Layout>

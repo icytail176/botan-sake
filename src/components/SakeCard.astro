@@ -1,0 +1,15 @@
+---
+import { appearancesFor, withBase, statusLabel, type Product } from '../lib/catalog';
+interface Props { product: Product; index: number }
+const { product, index } = Astro.props;
+const appearances = appearancesFor(product.id);
+const first = appearances[0]!;
+const pending = appearances.find(a => a.status === 'uncertain') ?? appearances.find(a => a.status === 'unreviewed');
+---
+<li class="sake-card" data-name={product.name} data-category={product.category ?? '未分類'} data-volumes={appearances.map(a=>a.volume).join(',')}>
+  <a href={withBase(`sake/${product.id}/`)} class="card-link">
+    <div class="product-square">{product.thumbnail ? <img src={withBase(product.thumbnail.path)} alt={product.name} width="800" height="800" loading={index < 4 ? 'eager' : 'lazy'} decoding="async" /> : <span class="image-missing">商品画像は準備中です</span>}<span class="card-open" aria-hidden="true">↗</span>{pending && <span class="uncertain-tag">{statusLabel(pending.status)}</span>}</div>
+    <div class="card-meta"><span>{product.category ?? '未分類'}</span><span>第{first.volume}巻 / {String(first.number).padStart(3,'0')}</span></div>
+    <h3>{product.name}</h3>
+  </a>
+</li>

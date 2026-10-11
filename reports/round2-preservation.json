@@ -1,0 +1,16 @@
+{
+  "preservedNamesAndURLs": 10,
+  "unchangedProductAndSceneAssociations": 20,
+  "unchangedThumbnails": 10,
+  "confirmed": 10,
+  "categoryStillMissing": [
+    "v01-004"
+  ],
+  "unreferencedDerivedAssets": 0,
+  "removedSystemFiles": [
+    ".DS_Store",
+    "第1巻/.DS_Store",
+    "第1巻/scenes/.DS_Store"
+  ],
+  "cleanTextNoBBCode": true
+}

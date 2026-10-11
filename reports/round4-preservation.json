@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-11T04:20:24.426Z",
+  "products": 10,
+  "confirmed": 10,
+  "specifications": 39,
+  "updatedProduct": "v01-004",
+  "newURL": "https://www.dragee.co.jp/fs/dragee/W-SK18070901",
+  "unchangedName": true,
+  "otherNineProductsUnchanged": true,
+  "appearanceAndImageAssociationsUnchanged": true,
+  "onlyProductChanges": [
+    "url",
+    "specificationGaps.identityVersion"
+  ],
+  "repeatedImportsIdentical": true,
+  "manualAndInfoBytesPreserved": true
+}

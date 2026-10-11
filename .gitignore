@@ -1,0 +1,22 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+playwright-report/
+test-results/
+reports/screenshots/
+
+# Local caches, logs and credentials
+.cache/
+.vite/
+coverage/
+*.log
+npm-debug.log*
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.idea/
+.vscode/
+Thumbs.db
